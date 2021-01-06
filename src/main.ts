@@ -31,6 +31,7 @@ import "@/plugins/logdown.plugin";
 import "@/plugins/axios.plugin";
 import "@/plugins/eventbus.plugin";
 import "@/plugins/vuex.plugin";
+import "@/plugins/baloise-ui.plugin"
 import { i18n } from "@/plugins/i18n.plugin";
 import { router } from "@/plugins/vue-router.plugin";
 // import store from './app/store'
