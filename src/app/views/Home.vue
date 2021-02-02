@@ -1,18 +1,24 @@
 <template>
   <div class="container">
     <img alt="Vue logo" src="../../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <HelloWorld :msg="message"/>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
 import HelloWorld from '@/app/components/HelloWorld.vue';
+import { ref, defineComponent } from "@vue/composition-api";
 
-@Component({
+export default defineComponent({
+  name: "Home",
   components: {
     HelloWorld,
   },
+  setup() {
+    const message = ref("Welcome to Your Vue.js + TypeScript App");
+    return {
+      message
+    }
+  }
 })
-export default class Home extends Vue {}
 </script>

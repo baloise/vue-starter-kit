@@ -34,6 +34,7 @@ import "@/plugins/vuex.plugin";
 import "@/plugins/baloise-ui.plugin"
 import { i18n } from "@/plugins/i18n.plugin";
 import { router } from "@/plugins/vue-router.plugin";
+import "@/plugins/vue-composition-api.plugin"
 // import store from './app/store'
 
 /* ============
@@ -45,7 +46,6 @@ import { router } from "@/plugins/vue-router.plugin";
 import App from "./app/App.vue";
 import { appConfig } from "@/config/app.config";
 import { store } from "@/app/store/index";
-
 Vue.config.productionTip = false;
 
 new Vue({
