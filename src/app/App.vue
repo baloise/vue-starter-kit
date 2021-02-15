@@ -1,26 +1,74 @@
 <template>
-  <div id="app">
-    <bal-navbar>
-      <span slot="navbar-brand">
-        <img
-          src="https://github.com/baloise/ui-library/raw/master/docs/assets/images/icon.svg"
-        />
-      </span>
-      <div slot="navbar-start" class="navbar-start">
-        <router-link class="navbar-item" to="/">Home</router-link>
-        <router-link class="navbar-item" to="/about">About</router-link>
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link">English</a>
-          <div class="navbar-dropdown">
-            <a class="navbar-item">English</a>
-            <a class="navbar-item">German</a>
-          </div>
-        </div>
+  <BalNavbar>
+    <BalNavbarBrand>
+      <img
+        src="https://github.com/baloise/ui-library/raw/master/docs/assets/images/icon.svg"
+      />
+      <BalText style="margin-left: 15px">Starter Kit App</BalText>
+    </BalNavbarBrand>
+  </BalNavbar>
+
+  <nav class="has-background-white">
+    <div class="container">
+      <BalTabs>
+        <router-link
+          v-for="routeItem in routes"
+          :key="routeItem.name"
+          :to="routeItem"
+          custom
+          v-slot="{ href, route, isActive, navigate }"
+        >
+          <BalTabItem
+            :active="isActive"
+            :href="href"
+            :label="route.name"
+            :value="route.name"
+            @balNavigate="navigate($event)"
+          ></BalTabItem>
+        </router-link>
+      </BalTabs>
+    </div>
+  </nav>
+
+  <main class="container">
+    <BalCard style="margin-top: 40px" @balTabChange="bubu($event)">
+      <div class="is-padded">
+        <router-view />
       </div>
-      <div slot="navbar-end" class="navbar-item">
-        <bal-button inverted>Increase</bal-button>
-      </div>
-    </bal-navbar>
-    <router-view />
+    </BalCard>
+  </main>
+
+  <!-- <div id="nav">
+    <router-link to="/">Home</router-link> |
+    <router-link to="/form">Form</router-link>
   </div>
+  <router-view /> -->
 </template>
+
+<script lang="ts">
+import { defineComponent } from 'vue'
+import {
+  BalNavbar,
+  BalTabs,
+  BalTabItem,
+  BalNavbarBrand,
+  BalCard,
+  BalText,
+} from '@baloise/ui-library-vue'
+import { routes } from '@/router'
+
+export default defineComponent({
+  name: 'App',
+  components: {
+    BalNavbar,
+    BalNavbarBrand,
+    BalCard,
+    BalTabs,
+    BalTabItem,
+    BalText,
+  },
+  setup() {
+    return { routes }
+  },
+})
+</script>

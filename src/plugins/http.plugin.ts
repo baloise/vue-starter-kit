@@ -9,16 +9,22 @@
  * https://github.com/mzabriskie/axios
  */
 
-import Vue, { PluginObject } from 'vue'
-
+import { Plugin } from 'vue'
 import Axios from 'axios'
 
-// import { store } from '@/app/store';
 import { appConfig } from '@/config/app.config'
 
+/**
+ * HTTP Defaults
+ */
 Axios.defaults.baseURL = appConfig.apiPath
-// Axios.defaults.headers.common.Accept = 'application/json';
-// Axios.defaults.headers.common.ContentType = 'application/json';
+Axios.defaults.timeout = 5000
+Axios.defaults.headers.common.Accept = 'application/json'
+Axios.defaults.headers.common.ContentType = 'application/json'
+
+/**
+ * HTTP Interceptors
+ */
 Axios.interceptors.request.use(
   request => {
     // Add a token to every request
@@ -44,11 +50,12 @@ Axios.interceptors.response.use(
   },
 )
 
-export const Http: PluginObject<void> = {
-  install(VueInstance): void {
-    VueInstance.$http = Axios
-    VueInstance.prototype.$http = Axios
+/**
+ * HTTP Vue plugin
+ */
+export const http: Plugin = {
+  async install(app) {
+    app.config.globalProperties.$http = Axios
+    app.provide<typeof Axios>('$http', Axios)
   },
 }
-
-Vue.use(Http)

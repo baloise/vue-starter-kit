@@ -1,23 +1,18 @@
-/* ============
+/**
  * Vue i18n
- * ============
+ * --------------------
+ * Internationalization plugin for Vue.js
  *
- * Internationalization plugin of Vue.js.
+ * https://github.com/intlify/vue-i18n-next
+ * https://vue-i18n.intlify.dev/guide
  *
- * https://kazupon.github.io/vue-i18n/
  */
-
-import Vue from 'vue'
-import VueI18n from 'vue-i18n'
-
+import { createI18n } from 'vue-i18n'
 import de from '@/i18n/de'
 import en from '@/i18n/en'
 
-Vue.use(VueI18n)
-
-export const i18n = new VueI18n({
+export const i18n = createI18n({
   locale: 'en',
   fallbackLocale: 'en',
-  silentTranslationWarn: true,
   messages: { de, en },
 })

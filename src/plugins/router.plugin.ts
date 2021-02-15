@@ -8,14 +8,10 @@
  * http://router.vuejs.org/en/index.html
  */
 
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import { routes } from '@/app/router'
+import { createRouter, createWebHistory } from 'vue-router'
+import { routes } from '@/router'
 
-Vue.use(VueRouter)
-
-export const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
+export const router = createRouter({
+  history: createWebHistory(process.env.BASE_URL),
   routes,
 })
