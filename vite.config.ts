@@ -1,45 +1,45 @@
-import { defineConfig, UserConfigExport } from "vite";
-import vue from "@vitejs/plugin-vue";
+import { defineConfig, UserConfigExport } from 'vite'
+import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/#resolve-alias
 const alias: Record<string, string> = {
-  "vue-i18n": "vue-i18n/dist/vue-i18n.cjs.js",
-};
+  'vue-i18n': 'vue-i18n/dist/vue-i18n.cjs.js',
+}
 
 // https://vitejs.dev/config/
 const config = defineConfig({
-  base: "/app-name/",
+  base: '/app-name/',
   resolve: { alias },
   optimizeDeps: {
-    exclude: ["@stencil/core", "@types/jest"],
+    exclude: ['@stencil/core', '@types/jest'],
   },
   plugins: [
     vue({
       template: {
         compilerOptions: {
-          isCustomElement: (tag) => tag.startsWith("bal"),
+          isCustomElement: (tag) => tag.startsWith('bal'),
         },
       },
     }),
   ],
-});
+})
 
 export default ({ mode }): UserConfigExport => {
-  if (mode === "development") {
+  if (mode === 'development') {
     return {
       ...config,
-      base: "/",
+      base: '/',
       // https://vitejs.dev/config/#server-options
       server: {
         proxy: {
-          "/api": {
-            target: "http://localhost:8080",
+          '/api': {
+            target: 'http://localhost:8080',
             changeOrigin: true,
           },
         },
       },
-    };
+    }
   }
 
-  return config;
-};
+  return config
+}

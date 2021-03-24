@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "target": "esnext",
+    "target": "es5",
     "module": "esnext",
     "moduleResolution": "node",
     "strict": true,
@@ -9,6 +9,7 @@
     "strictNullChecks": true,
     "jsx": "preserve",
     "sourceMap": true,
+    "skipLibCheck": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "lib": ["esnext", "dom"],
