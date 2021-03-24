@@ -1,10 +1,20 @@
 {
   "name": "vue-starter-kit",
   "version": "0.0.0",
+  "description": "Boilerplate project to start a Vue Baloise Application",
+  "license": "Apache-2.0",
+  "author": {
+    "name": "Gery Hirschfeld",
+    "email": "gerhard.hirschfeld@baloise.ch",
+    "url": "https://github.com/hirsch88"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "format": "npm run prettier:write",
+    "prettier:write": "prettier --write \"./src\"",
+    "prettier:check": "prettier --check \"./src\""
   },
   "dependencies": {
     "vue": "^3.0.5"
@@ -12,6 +22,7 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.1.5",
     "@vue/compiler-sfc": "^3.0.5",
+    "prettier": "^2.2.1",
     "typescript": "^4.1.3",
     "vite": "^2.1.0",
     "vue-tsc": "^0.0.8"
