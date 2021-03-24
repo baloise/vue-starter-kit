@@ -13,6 +13,9 @@ const config = defineConfig({
   optimizeDeps: {
     exclude: ['@stencil/core', '@types/jest'],
   },
+  build: {
+    chunkSizeWarningLimit: 1000,
+  },
   plugins: [
     vue({
       template: {
