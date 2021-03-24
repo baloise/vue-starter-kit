@@ -22,5 +22,7 @@ export default {
   },
   validator: {
     required: 'Required Field',
+    minLength: 'Value is to short',
+    maxLength: 'Value is to long',
   },
 }
