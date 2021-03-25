@@ -1,30 +1,36 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view />
+  <header>
+    <BalNavbar>
+      <BalNavbarBrand>
+        <BalIcon name="logo" inverted size="large"></BalIcon>
+        <BalText style="margin-left: 15px">
+          <strong>Vue</strong> Starter-Kit
+        </BalText>
+      </BalNavbarBrand>
+    </BalNavbar>
+  </header>
+  <main>
+    <div class="container">
+      <!-- Page content -->
+
+      <div id="nav">
+        <router-link to="/">Home</router-link>|
+        <router-link to="/about">About</router-link>
+      </div>
+      <router-view />
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <!-- Footer content -->
+    </div>
+  </footer>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script lang="ts">
+import { defineComponent } from 'vue'
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-</style>
+export default defineComponent({
+  name: 'App',
+})
+</script>

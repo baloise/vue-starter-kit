@@ -1,18 +1,20 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
-  </div>
+  <h1>Home</h1>
+  <p>{{ count }}</p>
+  <BalButton data-test-id="button-count" color="primary" @click="count++">
+    Increase
+  </BalButton>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import HelloWorld from '@/app/components/HelloWorld.vue' // @ is an alias to /src
+import { defineComponent, ref } from 'vue'
 
 export default defineComponent({
-  name: 'Home',
-  components: {
-    HelloWorld,
+  setup() {
+    const count = ref(0)
+    return {
+      count,
+    }
   },
 })
 </script>
