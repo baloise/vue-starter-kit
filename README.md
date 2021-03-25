@@ -2,9 +2,12 @@
 
 We have 3 starter kits:
 
-- [Vue 3 + Typescript + Webpack](https://github.com/baloise/vue-starter-kit)
-- [Vue 3 + Typescript + Vite](https://github.com/baloise/vue-starter-kit/tree/vite)
 - [Vue 2 + Typescript + Webpack](https://github.com/baloise/vue-starter-kit/tree/vue-2)
+  - Stable + IE 11 Support
+- [Vue 3 + Typescript + Webpack](https://github.com/baloise/vue-starter-kit)
+  - Vue 3 + Stable
+- [Vue 3 + Typescript + Vite](https://github.com/baloise/vue-starter-kit/tree/vite)
+  - Experimental with ES-Modules
 
 This template should help get you started developing with Vue 3 and Typescript in Webpack.
 
