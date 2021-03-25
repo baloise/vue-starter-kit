@@ -1,7 +1,7 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+import { RouteRecordRaw } from 'vue-router'
 import Home from '../app/pages/Home.vue'
 
-const routes: Array<RouteRecordRaw> = [
+export const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'Home',
@@ -17,10 +17,3 @@ const routes: Array<RouteRecordRaw> = [
       import(/* webpackChunkName: "about" */ '../app/pages/About.vue'),
   },
 ]
-
-const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
-  routes,
-})
-
-export default router
