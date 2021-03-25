@@ -1,4 +1,10 @@
-# Baloise - Vue Starter Kit (Vue 2 + Typescript + Webpack)
+<p align="center"><img width="160" src="./logo.svg" alt="Vue logo"></p>
+
+<h1 align="center">
+  Baloise - Vue Starter Kit
+  <br />
+  <small>(Vue 2 + Typescript + Webpack)</small>
+</h1>
 
 We have 3 starter kits:
 
