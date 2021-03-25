@@ -1,12 +1,22 @@
 {
   "name": "vue-starter-kit",
   "version": "0.1.0",
-  "private": true,
+  "description": "Boilerplate project to start a Vue Baloise Application",
+  "license": "Apache-2.0",
+  "author": {
+    "name": "Gery Hirschfeld",
+    "email": "gerhard.hirschfeld@baloise.ch",
+    "url": "https://github.com/hirsch88"
+  },
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "serve": "vue-cli-service serve --port 3000",
+    "build": "vue-cli-service build --mode production",
+    "test": "npm run test:e2e",
     "test:e2e": "vue-cli-service test:e2e",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "format": "npm run prettier:write",
+    "prettier:write": "prettier --write \"./src\"",
+    "prettier:check": "prettier --check \"./src\""
   },
   "dependencies": {
     "core-js": "^3.6.5",
