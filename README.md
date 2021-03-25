@@ -50,7 +50,7 @@ The development sever runs at `http://localhost:3000/`.
 
 ## NPM Scripts
 
-### Install
+### install
 
 Installs all the dependencies, which are listed in the `package.json`.
 
@@ -98,4 +98,6 @@ With the help of the tool prettier we format all our source files.
 npm run format
 ```
 
-> Apache-2.0 Licensed | Copyright © 2021-present Gery Hirschfeld & Contributors
+## License
+
+Apache-2.0 Licensed | Copyright © 2021-present Gery Hirschfeld & Contributors

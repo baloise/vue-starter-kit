@@ -23,15 +23,15 @@
     "cypress:open": "cypress open"
   },
   "dependencies": {
-    "@baloise/ui-library": "^4.6.0",
-    "@baloise/ui-library-vue": "^4.6.0",
+    "@baloise/ui-library": "^4.6.1",
+    "@baloise/ui-library-vue": "^4.6.1",
     "axios": "^0.21.1",
     "vue": "^3.0.5",
     "vue-i18n": "^9.0.0",
     "vue-router": "^4.0.5"
   },
   "devDependencies": {
-    "@baloise/ui-library-testing": "^4.6.0",
+    "@baloise/ui-library-testing": "^4.6.1",
     "@types/jest": "^26.0.21",
     "@typescript-eslint/eslint-plugin": "^4.19.0",
     "@typescript-eslint/parser": "^4.19.0",
@@ -50,6 +50,6 @@
     "start-server-and-test": "^1.12.1",
     "typescript": "^4.2.3",
     "vite": "^2.1.2",
-    "vue-tsc": "^0.0.8"
+    "vue-tsc": "0.0.14"
   }
 }
