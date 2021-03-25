@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "octref.vetur",
+    "esbenp.prettier-vscode",
+    "editorconfig.editorconfig",
+    "syler.sass-indented",
+    "dbaeumer.vscode-eslint",
+    "orta.vscode-jest"
+  ]
+}
