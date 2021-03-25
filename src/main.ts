@@ -2,7 +2,8 @@
  * Main File
  * ============
  *
- * Will initialize the application.
+ * The main.ts file is the entry point of our web application.
+ * Here we add global styling, plugins and define where the should get mounted.
  */
 
 import Vue from 'vue'
@@ -11,8 +12,7 @@ import Vue from 'vue'
  * Styling
  * ============
  *
- * Import the application styling.
- * Sass is used for this boilerplate.
+ * The global styles are defined in the src/styles/main.scss file.
  *
  * https://sass-lang.com/
  */
@@ -20,12 +20,18 @@ import Vue from 'vue'
 import '@/styles/main.scss'
 
 /* ============
- * Plugins
+ * Configure App
  * ============
  *
- * Import and bootstrap the plugins.
- * The order is important!
+ * In this section we define our entry component and mount it to a dom
+ * element form the index.html. Moreover, the plugins get registered.
+ *
+ * Plugins usually add global-level functionality to Vue. There is no strictly
+ * defined scope for a plugin - there are typically several types of plugins.
+ *
+ * https://vuejs.org/v2/guide/plugins.html
  */
+
 import { router } from './plugins/router.plugin'
 import { i18n } from './plugins/i18n.plugin'
 import './plugins/vuex.plugin'
@@ -33,12 +39,6 @@ import './plugins/composition-api.plugin'
 import './plugins/http.plugin'
 import './plugins/ui-library.plugin'
 
-/* ============
- * Main App
- * ============
- *
- * Last but not least, we import the main application.
- */
 import App from './app/App.vue'
 import { store } from '@/app/store/index'
 
@@ -68,6 +68,6 @@ new Vue({
   render: (h) => h(App),
 })
   /**
-   * Bind the Vue instance to the HTML.
+   * Bind the Vue instance to the HTML DOM.
    */
   .$mount('#app')

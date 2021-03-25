@@ -8,6 +8,12 @@ export const routes: Array<RouteConfig> = [
     component: Home,
   },
   {
+    path: '/form',
+    name: 'Form',
+    component: () =>
+      import(/* webpackChunkName: "form" */ '../app/pages/Form.vue'),
+  },
+  {
     path: '/about',
     name: 'About',
     component: () =>
