@@ -16,8 +16,8 @@ yarn-error.log*
 
 # Test files
 tests/e2e/downloads
-tests/e2e//videos
-tests/e2e//screenshots
+tests/e2e/videos
+tests/e2e/screenshots
 
 # Editor directories and files
 .idea
