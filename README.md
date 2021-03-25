@@ -40,8 +40,7 @@ This template should help get you started developing with Vue 3 and Typescript i
 
 ## Recommended Documentations
 
-- [Vue 3](https://v3.vuejs.org/)
-- [Vite](https://vitejs.dev/)
+- [Vue 2](https://vuejs.org/)
 - Learing Platform: [Vue Mastery](https://www.vuemastery.com/)
 
 ## Getting started
@@ -57,7 +56,7 @@ npm install
 After setting up the project we can serve our application with:
 
 ```bash
-npm run dev
+npm run serve
 ```
 
 The development sever runs at `http://localhost:3000/`.
@@ -72,12 +71,12 @@ Installs all the dependencies, which are listed in the `package.json`.
 npm install
 ```
 
-### dev
+### serve
 
 Serves the application on the development server, which runs at `http://localhost:3000/`.
 
 ```bash
-npm run dev
+npm run serve
 ```
 
 ### test
