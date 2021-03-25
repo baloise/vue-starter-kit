@@ -4,6 +4,11 @@ const VUE_APP_MODE =
 module.exports = {
   configureWebpack: {
     mode: VUE_APP_MODE,
+    resolve: {
+      alias: {
+        'vue-i18n': 'vue-i18n/dist/vue-i18n.cjs.js',
+      },
+    },
   },
   chainWebpack: (config) => {
     config.performance.maxEntrypointSize(1000000).maxAssetSize(1000000)
