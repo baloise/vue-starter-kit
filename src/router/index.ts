@@ -8,11 +8,6 @@ export const routes: Array<RouteRecordRaw> = [
     component: Home,
   },
   {
-    path: '/about',
-    name: 'About',
-    component: () => import('../app/pages/About.vue'),
-  },
-  {
     path: '/form',
     name: 'Form',
     component: () => import('../app/pages/Form.vue'),
