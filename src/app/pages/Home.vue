@@ -2,14 +2,14 @@
   <section id="home-page">
     <BalCard class="has-large-margin-top">
       <BalCardTitle>Vue Starter Kit</BalCardTitle>
-      <BalCardSubtitle>
+      <BalCardSubtitle data-test-id="count-message">
         The button was called {{ count }} times!
       </BalCardSubtitle>
       <BalCardContent>
         Welcome to our Baloise Starter Kit for the Vue Framework.
       </BalCardContent>
       <BalCardActions>
-        <BalButton data-test-id="button-count" color="primary" @click="count++">
+        <BalButton data-test-id="count-button" color="primary" @click="count++">
           Click me
         </BalButton>
       </BalCardActions>
