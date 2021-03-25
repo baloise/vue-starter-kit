@@ -16,6 +16,7 @@ export type FormControl = {
   hasValidators: boolean
   validators: ValidatorFn[]
   validate?: () => Promise<boolean>
+  touch?: () => void
 }
 
 export type ControlOptions = {
@@ -32,6 +33,7 @@ export type useFormControlFn = (
 
 export type FormControlComposable = {
   control: UnwrapRef<FormControl>
+  touch(): void
   validate(): Promise<boolean>
 }
 

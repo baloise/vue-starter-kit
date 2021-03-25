@@ -1,16 +1,32 @@
 <template>
-  <div class="home">
-    <h1>Home</h1>
-    <p>{{ count }}</p>
-    <BalButton data-test-id="button-count" color="primary" @click="count++">
-      Increase
-    </BalButton>
-  </div>
+  <section id="home-page">
+    <BalCard class="has-large-margin-top">
+      <BalCardTitle>Vue Starter Kit</BalCardTitle>
+      <BalCardSubtitle>
+        The button was called {{ count }} times!
+      </BalCardSubtitle>
+      <BalCardContent>
+        Welcome to our Baloise Starter Kit for the Vue Framework.
+      </BalCardContent>
+      <BalCardActions>
+        <BalButton data-test-id="button-count" color="primary" @click="count++">
+          Click me
+        </BalButton>
+      </BalCardActions>
+    </BalCard>
+  </section>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref } from '@vue/composition-api'
-import { BalButton } from '@baloise/ui-library-vue-2'
+import {
+  BalButton,
+  BalCard,
+  BalCardTitle,
+  BalCardSubtitle,
+  BalCardContent,
+  BalCardActions,
+} from '@baloise/ui-library-vue-2'
 
 export default defineComponent({
   setup() {
@@ -21,6 +37,11 @@ export default defineComponent({
   },
   components: {
     BalButton,
+    BalCard,
+    BalCardTitle,
+    BalCardSubtitle,
+    BalCardContent,
+    BalCardActions,
   },
 })
 </script>

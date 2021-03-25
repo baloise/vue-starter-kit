@@ -16,8 +16,8 @@
     "cypress:open": "cypress open"
   },
   "dependencies": {
-    "@baloise/ui-library": "^4.6.6",
-    "@baloise/ui-library-vue-2": "^4.6.6",
+    "@baloise/ui-library": "^4.6.7",
+    "@baloise/ui-library-vue-2": "^4.6.7",
     "@vue/composition-api": "^1.0.0-rc.5",
     "axios": "^0.21.1",
     "core-js": "^3.6.5",

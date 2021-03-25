@@ -9,7 +9,8 @@ export const useForm = (): FormComposable => {
 
   async function validateAll() {
     for (const control of Array.from(controls.values())) {
-      if (control.validate) {
+      if (control.validate && control.touch) {
+        control.touch()
         await control.validate()
       }
     }

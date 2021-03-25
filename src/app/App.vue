@@ -1,6 +1,6 @@
 <template>
   <div class="has-sticky-footer">
-    <header>
+    <header class="has-background-white">
       <BalNavbar>
         <BalNavbarBrand>
           <BalIcon name="logo" inverted size="large"></BalIcon>
@@ -9,22 +9,47 @@
           </BalText>
         </BalNavbarBrand>
       </BalNavbar>
+      <div class="container">
+        <BalTabs>
+          <router-link
+            to="/"
+            custom
+            v-slot="{ href, route, navigate, isExactActive }"
+          >
+            <BalTabItem
+              :value="route.path"
+              :label="route.name"
+              :href="href"
+              :active="isExactActive"
+              @balNavigate="navigate"
+            ></BalTabItem>
+          </router-link>
+          <router-link
+            to="/form"
+            custom
+            v-slot="{ href, route, navigate, isActive }"
+          >
+            <BalTabItem
+              :value="route.path"
+              :label="route.name"
+              :href="href"
+              :active="isActive"
+              @balNavigate="navigate"
+            ></BalTabItem>
+          </router-link>
+        </BalTabs>
+      </div>
     </header>
     <main>
       <div class="container">
         <!-- Page content -->
-
-        <div id="nav">
-          <router-link to="/">Home</router-link>|
-          <router-link to="/form">Form</router-link>|
-          <router-link to="/about">About</router-link>
-        </div>
         <router-view />
       </div>
     </main>
     <footer class="footer">
       <div class="container">
         <!-- Footer content -->
+        Footer
       </div>
     </footer>
   </div>
@@ -37,6 +62,8 @@ import {
   BalNavbarBrand,
   BalIcon,
   BalText,
+  BalTabs,
+  BalTabItem,
 } from '@baloise/ui-library-vue-2'
 
 export default defineComponent({
@@ -46,6 +73,8 @@ export default defineComponent({
     BalNavbarBrand,
     BalIcon,
     BalText,
+    BalTabs,
+    BalTabItem,
   },
 })
 </script>
