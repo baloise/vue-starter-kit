@@ -9,7 +9,6 @@ describe('Home Page', () => {
     page.button.get().click()
     page.button.get().click()
 
-    cy.contains('h1', 'Home')
-    cy.contains('p', '2')
+    page.getCountMessage().contains('The button was called 2 times!')
   })
 })

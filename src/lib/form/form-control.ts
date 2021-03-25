@@ -25,6 +25,10 @@ export const useFormControl: useFormControlFn = (
     hasValidators: validators.length > 0,
   })
 
+  function touch(): void {
+    control.touched = true
+  }
+
   async function validate(): Promise<boolean> {
     if (!control.disabled) {
       control.pending = true
@@ -47,13 +51,13 @@ export const useFormControl: useFormControlFn = (
   }
 
   function updateForm() {
-    options.notifyChange(control)
+    options.notifyChange({ ...control, validate, touch })
   }
 
   watch(
     () => control.model,
     async () => {
-      control.touched = true
+      touch()
       await validate()
     },
   )
@@ -61,5 +65,5 @@ export const useFormControl: useFormControlFn = (
 
   validate()
 
-  return { control, validate }
+  return { control, validate, touch }
 }

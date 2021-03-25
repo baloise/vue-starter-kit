@@ -13,10 +13,4 @@ export const routes: Array<RouteRecordRaw> = [
     component: () =>
       import(/* webpackChunkName: "form" */ '../app/pages/Form.vue'),
   },
-  {
-    path: '/about',
-    name: 'About',
-    component: () =>
-      import(/* webpackChunkName: "about" */ '../app/pages/About.vue'),
-  },
 ]
