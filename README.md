@@ -1,10 +1,19 @@
-# Baloise - Vue Starter Kit (Vue 3 + Typescript + Vite)
+<p align="center"><img width="160" src="./logo.svg" alt="Vue logo"></p>
+
+<h1 align="center">
+  Baloise - Vue Starter Kit
+  <br />
+  <small>(Vue 3 + Typescript + Vite)</small>
+</h1>
 
 We have 3 starter kits:
 
-- [Vue 3 + Typescript + Webpack](https://github.com/baloise/vue-starter-kit)
+- [Vue 2 + Typescript + Webpack](https://github.com/baloise/vue-starter-kit)
+  - Stable + IE 11 Support
+- [Vue 3 + Typescript + Webpack](https://github.com/baloise/vue-starter-kit/tree/vue-next)
+  - Vue 3 + Stable
 - [Vue 3 + Typescript + Vite](https://github.com/baloise/vue-starter-kit/tree/vite)
-- [Vue 2 + Typescript + Webpack](https://github.com/baloise/vue-starter-kit/tree/vue-2)
+  - Experimental with ES-Modules
 
 This template should help get you started developing with Vue 3 and Typescript in Vite.
 

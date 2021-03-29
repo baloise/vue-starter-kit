@@ -1,9 +1,13 @@
 import { ButtonAccessor, dataTestSelector } from '@baloise/ui-library-testing'
 
 export class HomePage {
-  button = ButtonAccessor(dataTestSelector('button-count'))
+  button = ButtonAccessor(dataTestSelector('count-button'))
 
-  open() {
+  open(): void {
     cy.visit('/')
+  }
+
+  getCountMessage(): Cypress.Chainable<JQuery<HTMLBalCardSubtitleElement>> {
+    return cy.get(dataTestSelector('count-message'))
   }
 }
