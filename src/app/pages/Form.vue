@@ -58,12 +58,12 @@
   </form>
 </template>
 <script lang="ts">
-import { defineComponent, ref, watch } from 'vue'
+import { defineComponent, ref } from 'vue'
 import {
+  validators,
   isMaxLength,
   isMinLength,
   isRequired,
-  validators,
 } from '../helpers/validators'
 import { useField, useForm, useIsFormValid } from 'vee-validate'
 import { balToastController } from '@baloise/ui-library'
@@ -71,9 +71,7 @@ export default defineComponent({
   name: 'Form',
   setup() {
     const { validate } = useForm()
-
     const isFormValid = useIsFormValid()
-
     const isFirstNameDisabled = ref(false)
 
     const {

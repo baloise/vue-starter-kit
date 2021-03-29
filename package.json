@@ -23,8 +23,8 @@
     "cypress:open": "cypress open"
   },
   "dependencies": {
-    "@baloise/ui-library": "^4.6.1",
-    "@baloise/ui-library-vue": "^4.6.1",
+    "@baloise/ui-library": "^4.8.0",
+    "@baloise/ui-library-vue": "^4.8.0",
     "axios": "^0.21.1",
     "vee-validate": "^4.2.4",
     "vue": "^3.0.5",

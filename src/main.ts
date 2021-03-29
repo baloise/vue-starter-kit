@@ -8,4 +8,8 @@ import { i18n } from './plugins/i18n.plugin'
 
 import App from './app/App.vue'
 
-createApp(App).use(router).use(i18n).use(baloiseUiLibrary).mount('#app')
+createApp(App)
+  .use(router)
+  .use(i18n)
+  .use(baloiseUiLibrary, { useVite: true })
+  .mount('#app')
