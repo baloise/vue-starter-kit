@@ -26,6 +26,7 @@
     "@baloise/ui-library": "^4.6.1",
     "@baloise/ui-library-vue": "^4.6.1",
     "axios": "^0.21.1",
+    "vee-validate": "^4.2.4",
     "vue": "^3.0.5",
     "vue-i18n": "^9.0.0",
     "vue-router": "^4.0.5"
