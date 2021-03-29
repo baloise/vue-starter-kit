@@ -1,25 +1,16 @@
 import { BalValidators } from '@baloise/ui-library'
+import { useValidator, ValidatorFn } from '@baloise/ui-library-vue'
 import { i18n } from '../../plugins/i18n.plugin'
-import { ValidatorFn } from '../../lib/form/types'
 
-export const isRequired = (): ValidatorFn => (value) => {
-  return translate(BalValidators.isRequired()(value), 'validator.required')
-}
+export { validators } from '@baloise/ui-library-vue'
 
-export const isMinLength = (length: number): ValidatorFn => (value) => {
-  return translate(
-    BalValidators.isMinLength(length)(value),
-    'validator.minLength',
-  )
-}
+const { createValidator } = useValidator(i18n.global.t)
 
-export const isMaxLength = (length: number): ValidatorFn => (value) => {
-  return translate(
-    BalValidators.isMaxLength(length)(value),
-    'validator.maxLength',
-  )
-}
+export const isRequired = (): ValidatorFn =>
+  createValidator(BalValidators.isRequired(), 'validator.required')
 
-function translate(isValid: boolean, translateKey: string) {
-  return isValid ? null : i18n.global.t(translateKey)
-}
+export const isMinLength = (length: number): ValidatorFn =>
+  createValidator(BalValidators.isMinLength(length), 'validator.minLength')
+
+export const isMaxLength = (length: number): ValidatorFn =>
+  createValidator(BalValidators.isMaxLength(length), 'validator.maxLength')

@@ -21,6 +21,7 @@ This template should help get you started developing with Vue 3 and Typescript i
 
 - Component library: [Baloise UI Library](https://baloise-ui-library.now.sh/)
 - Router: [Vue Router](https://next.router.vuejs.org/)
+- Form Validation: [VeeValidate](https://vee-validate.logaretm.com/v4/)
 - Internationalization: [Vue i18n](https://vue-i18n.intlify.dev/)
 - Http client: [Axios](https://www.npmjs.com/package/axios)
 - E2E Testing: [Cypress](https://www.cypress.io/)
