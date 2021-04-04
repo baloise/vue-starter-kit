@@ -6,6 +6,11 @@
     </BalCardSubtitle>
     <BalCardContent>
       Welcome to our Baloise Starter Kit for the Vue Framework.
+
+      <hello-world
+        :message="'Tony Stark'"
+        @onConfirm="onConfirm($event)"
+      ></hello-world>
     </BalCardContent>
     <BalCardActions>
       <BalButton data-test-id="count-button" color="primary" @click="count++">
@@ -17,11 +22,20 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
+import HelloWorld, { onConfirm } from '../components/HelloWorld.vue'
+
 export default defineComponent({
+  components: { HelloWorld },
   setup() {
     const count = ref(0)
+
+    const onConfirm: onConfirm = (value: string) => {
+      alert(value)
+    }
+
     return {
       count,
+      onConfirm,
     }
   },
 })

@@ -67,6 +67,7 @@ import {
 } from '../helpers/validators'
 import { useField, useForm, useIsFormValid } from 'vee-validate'
 import { balToastController } from '@baloise/ui-library'
+
 export default defineComponent({
   name: 'Form',
   setup() {

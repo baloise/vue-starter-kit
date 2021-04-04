@@ -1,0 +1,37 @@
+<template>
+  <h2 class="title is-size-2">{{ title }}</h2>
+  <p>{{ message }}</p>
+  <BalButton color="" @click="onClick($event)">Click Me</BalButton>
+</template>
+
+<script lang="ts">
+import { computed, defineComponent } from 'vue'
+
+export type onConfirm = (value: string) => void
+
+type HelloWorldEmitters = {
+  onConfirm: onConfirm
+}
+
+export default defineComponent({
+  props: {
+    message: {
+      type: String,
+      required: true,
+    },
+  },
+  emits: {
+    onConfirm: () => true,
+  } as HelloWorldEmitters,
+  setup(props, { emit }) {
+    const title = computed(() => 'Hello ' + props.message)
+
+    const onClick = (event: MouseEvent) => {
+      console.log(event)
+      emit('onConfirm', props.message)
+    }
+
+    return { title, onClick }
+  },
+})
+</script>

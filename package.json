@@ -25,6 +25,7 @@
   "dependencies": {
     "@baloise/ui-library": "^4.8.0",
     "@baloise/ui-library-vue": "^4.8.0",
+    "@baloise/vue-axios": "0.0.7",
     "axios": "^0.21.1",
     "vee-validate": "^4.2.4",
     "vue": "^3.0.5",
