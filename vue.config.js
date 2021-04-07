@@ -18,8 +18,8 @@ module.exports = {
     VUE_APP_MODE !== 'production'
       ? {
           proxy: {
-            '/app-name/api': {
-              target: 'http://localhost:8080',
+            '^/api': {
+              target: 'http://localhost:8080/your-app-name',
               changeOrigin: true,
             },
           },

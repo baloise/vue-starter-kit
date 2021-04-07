@@ -17,12 +17,20 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
+import HelloWorld, { onConfirm } from '../components/HelloWorld.vue'
 
 export default defineComponent({
+  components: { HelloWorld },
   setup() {
     const count = ref(0)
+
+    const onConfirm: onConfirm = (value: string) => {
+      alert(value)
+    }
+
     return {
       count,
+      onConfirm,
     }
   },
 })

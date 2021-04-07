@@ -72,9 +72,7 @@ export default defineComponent({
   name: 'Form',
   setup() {
     const { validate } = useForm()
-
     const isFormValid = useIsFormValid()
-
     const isFirstNameDisabled = ref(false)
 
     const {

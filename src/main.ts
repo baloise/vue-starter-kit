@@ -33,8 +33,8 @@ import './styles/main.scss'
  */
 
 import { baloiseUiLibrary } from '@baloise/ui-library-vue'
+import { vueAxios } from '@baloise/vue-axios'
 import { router } from './plugins/router.plugin'
-import { http } from './plugins/http.plugin'
 import { i18n } from './plugins/i18n.plugin'
 import App from './app/App.vue'
 
@@ -51,9 +51,8 @@ createApp(App)
   .use(i18n)
   /**
    * Our plugin to do http request with the axios library.
-   * There are located in the src/lib/http filder.
    */
-  .use(http)
+  .use(vueAxios)
   /**
    * Our Baloise component library.
    * https://baloise-ui-library.now.sh/
