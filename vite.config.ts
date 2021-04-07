@@ -51,8 +51,8 @@ export default ({ mode }): UserConfigExport => {
       // https://vitejs.dev/config/#server-options
       server: {
         proxy: {
-          '/api': {
-            target: 'http://localhost:8080',
+          '^/api': {
+            target: 'http://localhost:8080/your-app-name',
             changeOrigin: true,
           },
         },
