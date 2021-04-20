@@ -1,11 +1,12 @@
 <template>
   <h2 class="title is-size-2">{{ title }}</h2>
   <p>{{ message }}</p>
-  <BalButton color="" @click="onClick($event)">Click Me</BalButton>
+  <BalButton @click="onClick($event)">Click Me</BalButton>
 </template>
 
 <script lang="ts">
 import { computed, defineComponent } from 'vue'
+import { BalButton } from '@baloise/ui-library-vue'
 
 export type onConfirm = (value: string) => void
 
@@ -33,5 +34,6 @@ export default defineComponent({
 
     return { title, onClick }
   },
+  components: { BalButton },
 })
 </script>
