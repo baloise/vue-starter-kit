@@ -6,6 +6,11 @@
     </BalCardSubtitle>
     <BalCardContent>
       Welcome to our Baloise Starter Kit for the Vue Framework.
+
+      <hello-world
+        :message="'Tony Stark'"
+        @onConfirm="onConfirm($event)"
+      ></hello-world>
     </BalCardContent>
     <BalCardActions>
       <BalButton data-test-id="count-button" color="primary" @click="count++">

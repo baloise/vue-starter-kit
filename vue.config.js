@@ -1,9 +1,6 @@
-const VUE_APP_MODE =
-  process.env.VUE_APP_MODE !== 'development' ? 'production' : 'development'
-
 module.exports = {
   configureWebpack: {
-    mode: VUE_APP_MODE,
+    mode: process.env.NODE_ENV,
     resolve: {
       alias: {
         'vue-i18n': 'vue-i18n/dist/vue-i18n.cjs.js',
@@ -13,9 +10,9 @@ module.exports = {
   chainWebpack: (config) => {
     config.performance.maxEntrypointSize(1000000).maxAssetSize(1000000)
   },
-  publicPath: VUE_APP_MODE === 'production' ? '/app-name' : '/',
+  publicPath: process.env.NODE_ENV === 'production' ? '/app-name' : '/',
   devServer:
-    VUE_APP_MODE !== 'production'
+    process.env.NODE_ENV !== 'production'
       ? {
           proxy: {
             '^/api': {

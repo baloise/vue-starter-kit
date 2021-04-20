@@ -2,17 +2,16 @@
   <form @submit.prevent="onSubmit">
     <BalCard class="has-large-margin-top">
       <BalCardTitle>Form + Validation</BalCardTitle>
-      <BalCardSubtitle
-        >Form is {{ isFormValid ? 'valid' : 'invalid' }}</BalCardSubtitle
-      >
+      <BalCardSubtitle>
+        Form is {{ isFormValid ? 'valid' : 'invalid' }}
+      </BalCardSubtitle>
       <BalCardContent>
         <div class="columns">
           <div class="column">
             <BalField expanded :disabled="isFirstNameDisabled">
-              <BalFieldLabel
-                :text="$t('form.firstName.label')"
-                required
-              ></BalFieldLabel>
+              <BalFieldLabel required>
+                {{ $t('form.firstName.label') }}
+              </BalFieldLabel>
               <BalFieldControl>
                 <BalInput
                   v-model="firstName"
@@ -28,10 +27,9 @@
           </div>
           <div class="column">
             <BalField expanded>
-              <BalFieldLabel
-                :text="$t('form.lastName.label')"
-                required
-              ></BalFieldLabel>
+              <BalFieldLabel required>
+                {{ $t('form.lastName.label') }}
+              </BalFieldLabel>
               <BalFieldControl>
                 <BalInput
                   v-model="lastName"
