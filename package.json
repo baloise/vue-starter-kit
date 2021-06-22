@@ -23,9 +23,10 @@
     "cypress:open": "cypress open"
   },
   "dependencies": {
-    "@baloise/ui-library": "^4.15.1",
-    "@baloise/ui-library-vue": "^4.15.1",
+    "@baloise/design-system-components-vue": "^1.3.1",
+    "@baloise/design-system-testing": "^1.3.1",
     "@baloise/vue-axios": "0.0.7",
+    "ag-grid-community": "^25.3.0",
     "axios": "^0.21.1",
     "vee-validate": "^4.2.4",
     "vue": "^3.0.5",
@@ -33,7 +34,6 @@
     "vue-router": "^4.0.5"
   },
   "devDependencies": {
-    "@baloise/ui-library-testing": "^4.15.1",
     "@types/jest": "^26.0.21",
     "@typescript-eslint/eslint-plugin": "^4.19.0",
     "@typescript-eslint/parser": "^4.19.0",
