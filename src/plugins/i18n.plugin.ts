@@ -12,6 +12,12 @@ import de from '../i18n/de'
 import en from '../i18n/en'
 
 export const i18n = createI18n({
+  // you must set legacy `false`, to use Composition API
+  // https://vue-i18n-next.intlify.dev/guide/advanced/composition.html
+  legacy: false, 
+  // Inject i18n property into component 
+  // https://vue-i18n-next.intlify.dev/guide/advanced/composition.html#implicit-with-injected-properties-and-functions
+  globalInjection: true, 
   locale: 'en',
   fallbackLocale: 'en',
   messages: { de, en },
