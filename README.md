@@ -6,20 +6,9 @@
   <small>(Vue 3 + Typescript + Webpack)</small>
 </h1>
 
-We have 3 starter kits:
-
-- [Vue 3 + Typescript + Webpack](https://github.com/baloise/vue-starter-kit)
-  - Vue 3 + Stable
-- [Vue 3 + Typescript + Vite](https://github.com/baloise/vue-starter-kit/tree/vite)
-  - Experimental with ES-Modules
-- [Vue 2 + Typescript + Webpack](https://github.com/baloise/vue-starter-kit/tree/vue-2)
-  - Stable + IE 11 Support
-
-This template should help get you started developing with Vue 3 and Typescript in Webpack.
-
 ## Plugins
 
-- Component library: [Baloise Design System](https://baloise-design-system.vercel.app/)
+- Component library: [Baloise Design System](https://design.baloise.dev/)
 - Router: [Vue Router](https://next.router.vuejs.org/)
 - Form Validation: [VeeValidate](https://vee-validate.logaretm.com/v4/)
 - Internationalization: [Vue i18n](https://vue-i18n.intlify.dev/)
@@ -30,6 +19,7 @@ This template should help get you started developing with Vue 3 and Typescript i
 
 ## Recommended Utilities
 
+- A collection of utilities for Baloise web applications: [Web App Utils](https://www.npmjs.com/package/@baloise/web-app-utils)
 - JavaScript utility library: [Lodash](https://lodash.com/)
 - JavaScript date library: [date-fns](https://date-fns.org/)
 

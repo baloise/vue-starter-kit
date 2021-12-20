@@ -1,12 +1,14 @@
-<template>
-  <h2 class="title is-size-2">{{ title }}</h2>
-  <p>{{ message }}</p>
-  <BalButton @click="onClick($event)">Click Me</BalButton>
-</template>
-
-<script lang="ts">
-import { computed, defineComponent } from 'vue'
+<script setup lang="ts">
+import { defineProps, defineEmits } from 'vue'
 import { BalButton } from '@baloise/design-system-components-vue'
+import { counterStore } from '@/app/data/counter.store'
+
+const props = defineProps({
+  msg: {
+    type: String,
+    required: true,
+  },
+})
 
 export type onConfirm = (value: string) => void
 
@@ -14,26 +16,19 @@ type HelloWorldEmitters = {
   onConfirm: onConfirm
 }
 
-export default defineComponent({
-  props: {
-    message: {
-      type: String,
-      required: true,
-    },
-  },
-  emits: {
-    onConfirm: () => true,
-  } as HelloWorldEmitters,
-  setup(props, { emit }) {
-    const title = computed(() => 'Hello ' + props.message)
-
-    const onClick = (event: MouseEvent) => {
-      console.log(event)
-      emit('onConfirm', props.message)
-    }
-
-    return { title, onClick }
-  },
-  components: { BalButton },
-})
+const emits = defineEmits({
+  onConfirm: () => true,
+} as HelloWorldEmitters)
 </script>
+
+<template>
+  <section class="hello">
+    <p>{{ msg }}</p>
+    <br />
+    <p>My Counter is {{ counterStore.getState().count }}</p>
+    <br />
+    <BalButton color="info" outlined @click="emits('onConfirm', props.msg)">
+      Confirm
+    </BalButton>
+  </section>
+</template>
