@@ -3,12 +3,15 @@
 <h1 align="center">
   Baloise - Vue Starter Kit
   <br />
-  <small>(Vue 3 + Typescript + Webpack)</small>
+  <small>(Vue 3 + Typescript + Vite)</small>
 </h1>
+
+This template should help get you started developing with Vue 3 and Typescript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
 ## Plugins
 
 - Component library: [Baloise Design System](https://design.baloise.dev/)
+- State MGMT [Pinia](https://pinia.vuejs.org/)
 - Router: [Vue Router](https://next.router.vuejs.org/)
 - Form Validation: [VeeValidate](https://vee-validate.logaretm.com/v4/)
 - Internationalization: [Vue i18n](https://vue-i18n.intlify.dev/)
@@ -25,8 +28,7 @@
 
 ## Recommended IDE Setup
 
-- Install the IDE [VSCode](https://code.visualstudio.com/).
-- Install all recommanded extensions.
+- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
 
 ## Recommended Documentations
 
@@ -66,7 +68,7 @@ npm install
 Serves the application on the development server, which runs at `http://localhost:3000/`.
 
 ```bash
-npm run serve
+npm start
 ```
 
 ### test
@@ -100,10 +102,6 @@ With the help of the tool prettier we format all our source files.
 ```bash
 npm run format
 ```
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## License
 

@@ -1,5 +1,5 @@
 import { RouteRecordRaw } from 'vue-router'
-import Home from '../app/views/Home.vue'
+import Home from '@/pages/HomePage.vue'
 
 export const routes: Array<RouteRecordRaw> = [
   {
@@ -8,9 +8,8 @@ export const routes: Array<RouteRecordRaw> = [
     component: Home,
   },
   {
-    path: '/form',
-    name: 'Form',
-    component: () =>
-      import(/* webpackChunkName: "form" */ '../app/views/Form.vue'),
+    path: '/poke',
+    name: 'Poke',
+    component: () => import('@/pages/PokePage.vue'),
   },
 ]

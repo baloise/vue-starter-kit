@@ -1,17 +1,16 @@
-/* ============
+/**
  * Vue Router
- * ============
+ * --------------------
+ * The official router for Vue.js.
  *
- * The official Router for Vue.js. It deeply integrates with Vue.js core
- * to make building Single Page Applications with Vue.js a breeze.
+ * https://next.router.vuejs.org/
  *
- * http://router.vuejs.org/en/index.html
  */
 
 import { createRouter, createWebHistory } from 'vue-router'
-import { routes } from '../router'
+import { routes } from '@/router'
 
 export const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHistory(),
   routes,
 })

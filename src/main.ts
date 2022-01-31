@@ -32,32 +32,33 @@ import './styles/main.scss'
  * https://v3.vuejs.org/guide/plugins.html
  */
 
-import { BaloiseDesignSystem } from '@baloise/design-system-components-vue'
-import { vueAxios } from '@baloise/vue-axios'
-import { router } from './plugins/router.plugin'
-import { i18n } from './plugins/i18n.plugin'
-import App from './app/App.vue'
+import { baloiseDesignSystem } from '@/plugins/baloise-design-system.plugin'
+import { router } from '@/plugins/router.plugin'
+import { i18n } from '@/plugins/i18n.plugin'
+import { pina } from '@/plugins/store.plugin'
+import App from './App.vue'
 
 createApp(App)
   /**
    * Our router plugins, which sync URLs to views in your app.
-   * To define a new route open the src/app/router/routes file.
+   * To define a new route open the src/router/index file.
    */
   .use(router)
   /**
+   * Our global data store. Share data across your components
+   * with pina. Create new stores in the folder src/data
+   */
+  .use(pina)
+  /**
    * The localization plugin to support multiple locals.
-   * There are located in the src/i18n folder.
+   * There are located in the src/locales folder.
    */
   .use(i18n)
-  /**
-   * Our plugin to do http request with the axios library.
-   */
-  .use(vueAxios)
   /**
    * Our Baloise component library.
    * https://baloise-design-system.vercel.app/
    */
-  .use(BaloiseDesignSystem, { useVite: false })
+  .use(baloiseDesignSystem)
   /**
    * Bind the Vue instance to the HTML DOM.
    */
