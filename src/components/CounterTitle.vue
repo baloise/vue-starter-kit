@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { BalHeading } from '@baloise/design-system-components-vue'
-import { useCounterStore } from '@/data/counter.store'
+import { useCounterStore } from '@/stores/counter.store'
 import { storeToRefs } from 'pinia'
 
 const store = useCounterStore()

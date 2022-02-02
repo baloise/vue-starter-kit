@@ -1,4 +1,4 @@
-import { RouteRecordRaw } from 'vue-router'
+import type { RouteRecordRaw } from 'vue-router'
 import Home from '@/pages/HomePage.vue'
 
 export const routes: Array<RouteRecordRaw> = [

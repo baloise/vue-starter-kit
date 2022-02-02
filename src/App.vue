@@ -9,10 +9,8 @@ import {
   BalText,
   BalIcon,
 } from '@baloise/design-system-components-vue'
-import {
-  BalSwissLanguage,
-  updateBalLanguge,
-} from '@baloise/design-system-components'
+import { updateBalLanguge } from '@baloise/design-system-components'
+import type { BalSwissLanguage } from '@baloise/design-system-components'
 import { useI18n } from 'vue-i18n'
 import { ref } from 'vue'
 

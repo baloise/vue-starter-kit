@@ -1,9 +1,9 @@
 import { resolve } from 'path'
-import { defineConfig, UserConfigExport } from 'vite'
-import { UserConfig } from 'vitest'
+import { defineConfig } from 'vite'
+import type { UserConfigExport } from 'vite'
+import type { UserConfig } from 'vitest'
 import vue from '@vitejs/plugin-vue'
 import eslint from 'vite-plugin-eslint'
-import svg from 'vite-svg-loader'
 
 const testConfig = {
   test: {
@@ -17,7 +17,7 @@ const testConfig = {
 
 // https://vitejs.dev/config/
 const config = defineConfig({
-  base: '/app-name/',
+  base: '/',
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),
@@ -27,29 +27,15 @@ const config = defineConfig({
   optimizeDeps: {
     exclude: ['@stencil/core', '@types/jest'],
   },
-  plugins: [
-    vue(),
-    eslint(),
-    svg({
-      svgoConfig: {
-        plugins: [
-          {
-            name: 'removeDimensions',
-            params: { removeDimensions: true },
-          },
-        ],
-      },
-    }),
-  ],
+  plugins: [vue(), eslint()],
   ...testConfig,
 })
 
-export default ({ mode }): UserConfigExport => {
+export default ({ mode }: { mode: string }): UserConfigExport => {
   if (mode === 'development') {
     return {
       ...config,
-      base: '/',
-      // https://vitejs.dev/config/#server-options
+      // Mock backend service
       server: {
         proxy: {
           '^/api': {

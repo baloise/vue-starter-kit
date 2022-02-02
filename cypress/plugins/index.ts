@@ -1,14 +1,19 @@
-/* eslint-disable arrow-body-style */
-// https://docs.cypress.io/guides/guides/plugins-guide.html
+/* eslint-env node */
+// ***********************************************************
+// This example plugins/index.ts can be used to load plugins
+//
+// You can change the location of this file or turn off loading
+// the plugins file with the 'pluginsFile' configuration option.
+//
+// You can read more here:
+// https://on.cypress.io/plugins-guide
+// ***********************************************************
 
-// if you need a custom webpack configuration you can uncomment the following import
-// and then use the `file:preprocessor` event
-// as explained in the cypress docs
-// https://docs.cypress.io/api/plugins/preprocessors-api.html#Examples
+// This function is called when a project is opened or re-opened (e.g. due to
+// the project's config changing)
 
-// /* eslint-disable import/no-extraneous-dependencies, global-require */
-// const webpack = require('@cypress/webpack-preprocessor')
-
-module.exports = (on, config) => {
+export default ((on, config) => {
+  // `on` is used to hook into various events Cypress emits
+  // `config` is the resolved Cypress config
   return config
-}
+}) as Cypress.PluginConfig

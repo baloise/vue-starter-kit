@@ -14,7 +14,7 @@ import {
   BalListItemIcon,
 } from '@baloise/design-system-components-vue'
 import CounterTitle from '@/components/CounterTitle.vue'
-import { useCounterStore } from '@/data/counter.store'
+import { useCounterStore } from '@/stores/counter.store'
 import vueSvg from '@/assets/vue.svg?raw'
 import balVueSvg from '@/assets/logo.svg?raw'
 import piniaSvg from '@/assets/pinia.svg?raw'

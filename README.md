@@ -1,4 +1,4 @@
-<p align="center"><img width="160" src="./logo.svg" alt="Vue logo"></p>
+<p align="center"><img width="160" src="./src/assets/logo.svg" alt="Vue logo"></p>
 
 <h1 align="center">
   Baloise - Vue Starter Kit
@@ -48,7 +48,7 @@ npm install
 After setting up the project we can serve our application with:
 
 ```bash
-npm start 
+npm start
 // or
 npm run dev
 ```

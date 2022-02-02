@@ -1,21 +1,20 @@
 {
+  "extends": "@vue/tsconfig/tsconfig.web.json",
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
+  "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
-    "target": "esnext",
-    "useDefineForClassFields": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "strict": true,
-    "jsx": "preserve",
-    "sourceMap": true,
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "lib": ["esnext", "dom"],
-    "types": ["cypress", "vite/client"],
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     }
   },
-  "exclude": ["dist", "node_modules"]
+
+  "references": [
+    {
+      "path": "./tsconfig.vite-config.json"
+    },
+    {
+      "path": "./tsconfig.vitest.json"
+    }
+  ]
 }
