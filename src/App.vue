@@ -40,7 +40,7 @@ const selectLanguage = (lang: BalSwissLanguage) => {
               <BalText>Home</BalText>
             </router-link>
             <router-link to="/poke" class="navbar-item">
-              <BalText>Poke</BalText>
+              <BalText>Form / API</BalText>
             </router-link>
           </BalNavbarMenuStart>
         </BalNavbarMenu>

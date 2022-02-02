@@ -40,15 +40,17 @@ This template should help get you started developing with Vue 3 and Typescript i
 To get stared clone the vue-starter-kit repository to you machine. Then navigate into the root folder of the project and install the npm dependencies.
 
 ```bash
-git clone git@github.com:baloise/vue-starter-kit.git
-cd vue-starter-kit
+npx degit baloise/vue-starter-kit new-project-name
+cd new-project-name
 npm install
 ```
 
 After setting up the project we can serve our application with:
 
 ```bash
-npm run serve
+npm start 
+// or
+npm run dev
 ```
 
 The development sever runs at `http://localhost:3000/`.
@@ -61,14 +63,6 @@ Installs all the dependencies, which are listed in the `package.json`.
 
 ```bash
 npm install
-```
-
-### serve
-
-Serves the application on the development server, which runs at `http://localhost:3000/`.
-
-```bash
-npm start
 ```
 
 ### test
