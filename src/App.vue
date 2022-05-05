@@ -1,27 +1,14 @@
 <script setup lang="ts">
 import {
   BalApp,
-  BalFooter,
   BalNavbar,
   BalNavbarBrand,
+  BalIcon,
+  BalText,
   BalNavbarMenu,
   BalNavbarMenuStart,
-  BalText,
-  BalIcon,
+  BalFooter,
 } from '@baloise/design-system-components-vue'
-import { updateBalLanguge } from '@baloise/design-system-components'
-import type { BalSwissLanguage } from '@baloise/design-system-components'
-import { useI18n } from 'vue-i18n'
-import { ref } from 'vue'
-
-const { locale } = useI18n()
-
-const languages = ref<BalSwissLanguage[]>(['de', 'en', 'fr', 'it'])
-
-const selectLanguage = (lang: BalSwissLanguage) => {
-  locale.value = lang
-  updateBalLanguge(lang)
-}
 </script>
 
 <template>
@@ -45,44 +32,8 @@ const selectLanguage = (lang: BalSwissLanguage) => {
       </BalNavbar>
     </header>
     <main class="container is-compact">
-      <!-- Page content -->
       <router-view />
     </main>
-    <BalFooter>
-      <div class="container">
-        <a
-          v-for="lang in languages"
-          :key="lang"
-          class="lang-link is-link is-inverted"
-          :class="{ 'has-text-blue-3': locale === lang }"
-          @click="selectLanguage(lang)"
-        >
-          {{ lang.toUpperCase() }}
-        </a>
-      </div>
-    </BalFooter>
+    <BalFooter></BalFooter>
   </BalApp>
 </template>
-
-<style lang="scss" scoped>
-@use 'sass:map';
-
-@import 'node_modules/@baloise/design-system-components/src/styles/global.utilities';
-
-.lang-link {
-  padding-bottom: 2px;
-
-  &::after {
-    content: '|';
-    color: $white;
-    margin-left: map.get($spacing-values, '1');
-    margin-right: map.get($spacing-values, '1');
-  }
-
-  &:last-child {
-    &::after {
-      content: '';
-    }
-  }
-}
-</style>
