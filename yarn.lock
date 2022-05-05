@@ -28,21 +28,20 @@
   "resolved" "https://registry.npmjs.org/@babel/parser/-/parser-7.17.10.tgz"
   "version" "7.17.10"
 
-"@baloise/design-system-components-vue@^10.10.9-beta.6":
-  "integrity" "sha512-eW5qji8WJAhb2dGQNcWWE5AwPaccr9423Dx+DBOg176LXzEa9z6ixjcJVR1pzyYxP9CnWZ5Fc7iRWzAjUlJ+Kg=="
-  "resolved" "https://registry.npmjs.org/@baloise/design-system-components-vue/-/design-system-components-vue-10.10.9-beta.6.tgz"
-  "version" "10.10.9-beta.6"
+"@baloise/design-system-components-vue@^10.10.9-beta.11":
+  "integrity" "sha512-a2RxwfD1UmAF9nR0BMJNpO6uhc7cq8z6VMNpnDQrtEA8mOldP5WDuC9LIGAoR4UQHIBCWmK5AhETnZiFDevX4Q=="
+  "resolved" "https://registry.npmjs.org/@baloise/design-system-components-vue/-/design-system-components-vue-10.10.9-beta.11.tgz"
+  "version" "10.10.9-beta.11"
   dependencies:
-    "@baloise/design-system-components" "10.10.9-beta.6+6815b8f6"
-    "copyfiles" "^2.4.1"
+    "@baloise/design-system-components" "10.10.9-beta.11+64947271"
 
-"@baloise/design-system-components@10.10.9-beta.6+6815b8f6":
-  "integrity" "sha512-QX0apUePuQ0IR+8RqNZxpsd67XssSth6A470IeSe7OYBBaExwcEGEpoBXhPojjlSZl1LY70NA1nzNNRGgeY+nA=="
-  "resolved" "https://registry.npmjs.org/@baloise/design-system-components/-/design-system-components-10.10.9-beta.6.tgz"
-  "version" "10.10.9-beta.6"
+"@baloise/design-system-components@10.10.9-beta.11+64947271":
+  "integrity" "sha512-vH5dUXYKp4LsCWAGMcK0CX0IHa4SODaUr0o4UIq5zuLftKrKRu607/ypX2fkzgBGItzgNbAABrIX1wUAX0YatA=="
+  "resolved" "https://registry.npmjs.org/@baloise/design-system-components/-/design-system-components-10.10.9-beta.11.tgz"
+  "version" "10.10.9-beta.11"
   dependencies:
-    "@baloise/design-system-fonts" "10.10.9-beta.6+6815b8f6"
-    "@baloise/design-system-icons" "10.10.9-beta.6+6815b8f6"
+    "@baloise/design-system-fonts" "10.10.9-beta.11+64947271"
+    "@baloise/design-system-icons" "10.10.9-beta.11+64947271"
     "@baloise/web-app-utils" "^3.3.3"
     "@popperjs/core" "^2.11.4"
     "@stencil/core" "^2.14.2"
@@ -63,22 +62,22 @@
     "lodash.trim" "^4.5.1"
     "lodash.upperfirst" "^4.3.1"
 
-"@baloise/design-system-fonts@10.10.9-beta.6+6815b8f6":
-  "integrity" "sha512-IHMnyVq9tE/NvYnYxwcMtSWmzWBkuwgL8L5Z0Iocy+ydKQzAuB8DOEs32+ahACewSWXeOWsRYaLQOjtvCGdi5Q=="
-  "resolved" "https://registry.npmjs.org/@baloise/design-system-fonts/-/design-system-fonts-10.10.9-beta.6.tgz"
-  "version" "10.10.9-beta.6"
+"@baloise/design-system-fonts@10.10.9-beta.11+64947271":
+  "integrity" "sha512-0TbQParTdtLEQsub3hnjnIwFGdHMrUHbS+DEP33smVnoEtuwL2ZawOfgi5MCOY9qMw3pRTpzDGu2CIIeGVxDfw=="
+  "resolved" "https://registry.npmjs.org/@baloise/design-system-fonts/-/design-system-fonts-10.10.9-beta.11.tgz"
+  "version" "10.10.9-beta.11"
 
-"@baloise/design-system-icons@10.10.9-beta.6+6815b8f6":
-  "integrity" "sha512-K/xZVEt0xfje1hn/BeEoR08urQDBeK8tWrBtOWqYxH/tFmtUVM2YlQGACf9QDl1Z/8Qs543I7Weowzf0gS3LzA=="
-  "resolved" "https://registry.npmjs.org/@baloise/design-system-icons/-/design-system-icons-10.10.9-beta.6.tgz"
-  "version" "10.10.9-beta.6"
+"@baloise/design-system-icons@10.10.9-beta.11+64947271":
+  "integrity" "sha512-eV2xfriXcSHA3/5U/UaVui2yTske5UsvRkrQnbQW5+sOAkzEdlUck/EjFIKV/danJabsf1pjAjM1xIH7Fh52Og=="
+  "resolved" "https://registry.npmjs.org/@baloise/design-system-icons/-/design-system-icons-10.10.9-beta.11.tgz"
+  "version" "10.10.9-beta.11"
 
-"@baloise/design-system-testing@^10.10.9-beta.6":
-  "integrity" "sha512-A5Op22ngqZjGHn56vgI0sVh7jthbpWsbKPlfI5yAzrVwAUs2/SSbWSdA2jDCcZoIeXIH4IL2pmDxudHftlOvPg=="
-  "resolved" "https://registry.npmjs.org/@baloise/design-system-testing/-/design-system-testing-10.10.9-beta.6.tgz"
-  "version" "10.10.9-beta.6"
+"@baloise/design-system-testing@^10.10.9-beta.11":
+  "integrity" "sha512-mKGt2DxAHOKqSbPQwDf3e4IhLVPdeuJPHT5VLZM6KyHdEOi4D2uGKKn3iJnBeeY5zM3YgBZEMNMu3/NsrmVwFQ=="
+  "resolved" "https://registry.npmjs.org/@baloise/design-system-testing/-/design-system-testing-10.10.9-beta.11.tgz"
+  "version" "10.10.9-beta.11"
   dependencies:
-    "@baloise/design-system-components" "10.10.9-beta.6+6815b8f6"
+    "@baloise/design-system-components" "10.10.9-beta.11+64947271"
     "@baloise/web-app-utils" "^3.0.1"
     "date-fns" "^2.28.0"
 

@@ -14,7 +14,7 @@ import {
 import { computed, onMounted } from 'vue'
 import { useAxios } from '@baloise/vue-axios'
 import { useField, useForm } from 'vee-validate'
-import { isRequired, rules } from '../helpers/validators'
+import { rules, isRequired } from '../helpers/validators'
 import { pokeApi, pokeGetPokemon } from '../api/poke.api'
 
 interface Pokemon {
