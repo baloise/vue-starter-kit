@@ -22,6 +22,7 @@ import baloiseSvg from '@/assets/baloise.svg?raw'
 import veeSvg from '@/assets/vee.svg?raw'
 import viteSvg from '@/assets/vite.svg?raw'
 import CounterButton from '../components/CounterButton.vue'
+import { storeToRefs } from 'pinia'
 
 const store = useCounterStore()
 
@@ -108,9 +109,9 @@ const links = ref([
   },
 ])
 
-const increment = () => {
-  store.increment()
-}
+const { counter } = storeToRefs(store)
+
+const increment = () => store.increment()
 </script>
 
 <template>
@@ -141,7 +142,7 @@ const increment = () => {
       >
         Baloise Design System - Vue Starter Template
       </BalHeading>
-      <CounterTitle />
+      <CounterTitle :counter="counter" />
       <CounterButton
         :label="'increment'"
         @increment="increment()"

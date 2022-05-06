@@ -19,6 +19,7 @@ This template should help get you started developing with Vue 3 and Typescript i
 - E2E Testing: [Cypress](https://www.cypress.io/)
 - Linting: [ESlint](https://eslint.org/)
 - Formatting: [Prettier](https://prettier.io/)
+- Storybook: [Storybook](https://storybook.js.org/)
 
 ## Recommended Utilities
 
@@ -65,9 +66,17 @@ Installs all the dependencies, which are listed in the `package.json`.
 npm install
 ```
 
+### storybook
+
+Starts the local storybook server on http://localhost:6006.
+
+```bash
+npm run storybook
+```
+
 ### test
 
-Starts the development server and runs the cypress E2E test againts it.
+Starts the development server and runs the cypress E2E test against it.
 
 ```bash
 npm run test

@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import { BalButton } from '@baloise/design-system-components-vue'
+import { BalButton, BalCard } from '@baloise/design-system-components-vue'
 
-interface Props {
+export interface CounterButtonProps {
   /**
    * Label of the button component
    */
   label: string
 }
 
-const props = withDefaults(defineProps<Props>(), {
+const props = withDefaults(defineProps<CounterButtonProps>(), {
   label: 'increase',
 })
 
@@ -16,11 +16,11 @@ const emit = defineEmits<{
   /**
    * Fired when the button was clicked
    */
-  (event: 'increment', label: string): void
+  (event: 'increment', value: number): void
 }>()
 
 const emitIncrement = () => {
-  emit('increment', props.label)
+  emit('increment', 42)
 }
 </script>
 

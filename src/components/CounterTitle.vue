@@ -1,10 +1,16 @@
 <script setup lang="ts">
 import { BalHeading } from '@baloise/design-system-components-vue'
-import { useCounterStore } from '@/stores/counter.store'
-import { storeToRefs } from 'pinia'
 
-const store = useCounterStore()
-const { counter } = storeToRefs(store)
+export interface CounterTitleProps {
+  /**
+   * Counter value to show in the heading
+   */
+  counter: number
+}
+
+const props = withDefaults(defineProps<CounterTitleProps>(), {
+  counter: 0,
+})
 </script>
 
 <template>
@@ -15,6 +21,6 @@ const { counter } = storeToRefs(store)
     color="danger"
     space="bottom"
   >
-    The count is at {{ counter }}!
+    The count is at {{ props.counter }}!
   </BalHeading>
 </template>
