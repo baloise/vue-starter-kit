@@ -9,7 +9,7 @@
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview --port 5050",
     "test": "npm run test:unit",
-    "test:ui": "vitest --ui",
+    "test:ui": "vitest --ui --coverage",
     "test:unit": "vitest",
     "test:unit:coverage": "vitest run --coverage",
     "test:e2e": "start-server-and-test preview http://127.0.0.1:5050/ 'cypress open'",

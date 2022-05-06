@@ -1,6 +1,6 @@
 import type { Meta, Story } from '@storybook/vue3'
-import type { CounterButtonProps } from './CounterButton.vue'
-import CounterButton from './CounterButton.vue'
+import type { CounterButtonProps } from '../CounterButton.vue'
+import CounterButton from '../CounterButton.vue'
 
 export default {
   title: 'Components/CounterButton',

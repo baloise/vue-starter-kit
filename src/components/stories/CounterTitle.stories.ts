@@ -1,6 +1,6 @@
 import type { Meta, Story } from '@storybook/vue3'
-import type { CounterTitleProps } from './CounterTitle.vue'
-import CounterTitle from './CounterTitle.vue'
+import type { CounterTitleProps } from '../CounterTitle.vue'
+import CounterTitle from '../CounterTitle.vue'
 
 export default {
   title: 'Components/CounterTitle',
