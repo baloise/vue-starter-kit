@@ -1,0 +1,20 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "ignorePaths": ["node_modules/**", "app/src/locales/**"],
+  "words": [
+    "baloise",
+    "Baloise",
+    "stylelint",
+    "Pinia",
+    "pinia",
+    "vue",
+    "Vue",
+    "vite",
+    "Vite",
+    "Squirtle",
+    "xsmall",
+    "testid",
+    "mgmt"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "name": "app",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "postinstall": "baloiseStencilViteFix && npm run copy:fonts",
+    "copy:fonts": "copyfiles --flat node_modules/@baloise/design-system-fonts/lib/* public/assets/fonts",
+    "start": "npm run dev",
+    "dev": "vite --port 3000",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview --port 3000",
+    "lint": "vue-tsc --noEmit",
+    "test": "npm run test:run",
+    "test:run": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:ui": "vitest --ui"
+  },
+  "dependencies": {
+    "@baloise/design-system-components-vue": "^10.10.9-beta.15",
+    "@baloise/vue-axios": "^1.3.2",
+    "@baloise/web-app-validators-vue": "^3.3.3",
+    "axios": "^0.27.2",
+    "pinia": "^2.0.13",
+    "vee-validate": "^4.5.11",
+    "vue": "^3.2.33",
+    "vue-i18n": "^9.1.10",
+    "vue-router": "^4.0.15"
+  },
+  "devDependencies": {
+    "@baloise/stencil-vite-fix": "^10.10.8",
+    "@vitejs/plugin-vue": "^2.3.1",
+    "@vitest/ui": "^0.10.5",
+    "@vue/test-utils": "^2.0.0-rc.21",
+    "c8": "^7.11.2",
+    "copyfiles": "^2.4.1",
+    "happy-dom": "^3.1.1",
+    "sass": "^1.51.0",
+    "typescript": "^4.5.4",
+    "unplugin-auto-import": "^0.7.1",
+    "vite": "^2.9.7",
+    "vitest": "^0.10.5",
+    "vue-tsc": "^0.34.7"
+  }
+}
