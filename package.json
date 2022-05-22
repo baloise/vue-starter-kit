@@ -37,7 +37,9 @@
     "test:e2e:ci": "start-server-and-test app:preview http://127.0.0.1:3000/ 'cypress run'"
   },
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "types-ddd": "^2.12.0"
+  },
   "devDependencies": {
     "@baloise/design-system-testing": "^10.10.9-beta.15",
     "@rushstack/eslint-patch": "^1.1.3",

@@ -17,7 +17,7 @@ import { createApp } from 'vue'
  * https://sass-lang.com/
  */
 
-import './styles/main.scss'
+// import './app/styles/main.scss'
 
 /* ============
  * Configure App
@@ -32,11 +32,11 @@ import './styles/main.scss'
  * https://v3.vuejs.org/guide/plugins.html
  */
 
-import { baloiseDesignSystem } from './plugins/baloise-design-system.plugin'
-import { router } from './plugins/router.plugin'
-import { i18n } from './plugins/i18n.plugin'
-import { pinia } from './plugins/store.plugin'
-import App from './App.vue'
+import { baloiseDesignSystem } from './infra/ui/plugins/baloise-design-system.plugin'
+import { router } from './infra/ui/plugins/router.plugin'
+import { i18n } from './infra/ui/plugins/i18n.plugin'
+import { pinia } from './infra/ui/plugins/store.plugin'
+import App from './infra/ui/App.vue'
 
 const app = createApp(App)
   /**
