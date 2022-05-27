@@ -1,4 +1,4 @@
-import { checkoutOrderUseCase } from './../../../services/order.cases'
+import { checkoutOrderUseCase } from './../../../services/use-cases/order.cases'
 import { Order } from './../../../domain/Order'
 import { defineStore } from 'pinia'
 import { useRouter } from 'vue-router'

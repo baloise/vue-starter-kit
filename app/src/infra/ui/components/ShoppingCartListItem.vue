@@ -9,6 +9,7 @@ interface Props {
    * Counter value to show in the heading
    */
   item?: ShoppingCartItem
+  readonly: boolean
 }
 
 const props = defineProps<Props>()
@@ -42,12 +43,19 @@ const valueChange = (value: number | undefined) => {
       {{ props.item.product.name }}
     </h5>
     <BalInputStepper
+      v-if="!props.readonly"
       class="is-flex-grow-1"
       :min="0"
       :max="10"
       :value="props.item.amount"
       @bal-input="valueChange($event as any)"
     ></BalInputStepper>
+    <p
+      v-if="props.readonly"
+      class="is-flex-grow-1 has-text-info has-text-rightss"
+    >
+      x{{ props.item.amount }}
+    </p>
     <h5 class="title is-size-5 m-0 has-text-right" style="width: 120px">
       {{ balCurrency(props.item.sum()) }}
     </h5>

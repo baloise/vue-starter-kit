@@ -1,6 +1,6 @@
-import { ShoppingCartItem } from './../domain/ShoppingCartItem'
-import { ShoppingCart } from '../domain/ShoppingCart'
-import { Pizza } from '../domain/Pizza'
+import { ShoppingCartItem } from '../../domain/ShoppingCartItem'
+import { ShoppingCart } from '../../domain/ShoppingCart'
+import { Pizza } from '../../domain/Pizza'
 import { UseCase } from './use-case'
 
 /**

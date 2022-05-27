@@ -1,11 +1,11 @@
-import { resetUseCase } from './../../../services/shopping-cart.cases'
 import { Pizza } from './../../../domain/Pizza'
 import { ShoppingCartItem } from './../../../domain/ShoppingCartItem'
 import { defineStore } from 'pinia'
 import {
   addPizzaUseCase,
   removePizzaUseCase,
-} from '../../../services/shopping-cart.cases'
+  resetUseCase,
+} from '../../../services/use-cases/shopping-cart.cases'
 
 export const useShoppingCartStore = defineStore('cart', {
   state: () => {

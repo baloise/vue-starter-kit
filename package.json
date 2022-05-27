@@ -38,6 +38,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "pinia-logger": "^1.3.2",
     "types-ddd": "^2.12.0"
   },
   "devDependencies": {

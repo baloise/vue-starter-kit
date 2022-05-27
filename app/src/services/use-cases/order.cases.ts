@@ -1,9 +1,8 @@
-import { ShoppingCartItem } from './../domain/ShoppingCartItem'
-import { Order } from '../domain/Order'
-import { ShoppingCart } from '../domain/ShoppingCart'
-import { User } from '../domain/Contact'
+import { ShoppingCartItem } from './../../domain/ShoppingCartItem'
+import { Order } from '../../domain/Order'
+import { ShoppingCart } from '../../domain/ShoppingCart'
 import { UseCase } from './use-case'
-import { EmptyShoppingCartException } from '../domain/Exceptions'
+import { EmptyShoppingCartException } from '../../domain/Exceptions'
 
 /**
  * CHECKOUT ORDER - USE CASE
@@ -35,23 +34,6 @@ export const checkoutOrderUseCase: UseCase<
     const order = Order.create()
     navigateToCheckout()
     onSuccess({ order })
-  } catch (error) {
-    onError(error)
-  }
-}
-
-interface MakeOrderContext {
-  user: User
-  shoppingCart: ShoppingCart
-}
-
-export const makeOrderUseCase: UseCase<MakeOrderContext> = (
-  { user, shoppingCart },
-  { onSuccess, onError },
-) => {
-  try {
-    const order = new Order(user, shoppingCart)
-    onSuccess(order)
   } catch (error) {
     onError(error)
   }

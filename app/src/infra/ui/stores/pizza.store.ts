@@ -1,5 +1,5 @@
 import { Pizza } from './../../../domain/Pizza'
-import { getAllPizzasUseCase } from './../../../services/pizza.cases'
+import { getAllPizzasUseCase } from './../../../services/use-cases/pizza.cases'
 import { defineStore } from 'pinia'
 import { mockAdapter } from '../../api/http/mock.adapter'
 

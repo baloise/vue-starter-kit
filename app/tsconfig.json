@@ -10,6 +10,8 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "esModuleInterop": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": false,
     "lib": ["esnext", "dom"],
     "skipLibCheck": true,
     "types": ["vitest/globals"]

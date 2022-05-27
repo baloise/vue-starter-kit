@@ -1,6 +1,6 @@
-import { Pizza } from '../domain/Pizza'
+import { Pizza } from '../../domain/Pizza'
 import { UseCase } from './use-case'
-import { HttpAdapter } from '../infra/api/http/http'
+import { HttpAdapter } from '../../infra/api/http/http'
 
 interface Context {
   http: HttpAdapter

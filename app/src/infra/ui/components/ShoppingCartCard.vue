@@ -12,6 +12,7 @@ interface Props {
   list: ShoppingCartItem[]
   total: number
   amount: number
+  readonly: boolean
 }
 
 const props = defineProps<Props>()
@@ -29,12 +30,14 @@ const emit = defineEmits<{
       <h2 class="title is-size-3 mt-0 mb-6">Shopping Cart</h2>
       <ShoppingCartList
         :list="props.list"
+        :readonly="props.readonly"
         @add-pizza="($event) => emit('addPizza', $event)"
         @remove-pizza="($event) => emit('removePizza', $event)"
       ></ShoppingCartList>
       <hr class="lined my-4" />
       <p class="my-4">Total: {{ props.total }}</p>
       <BalButton
+        v-if="!props.readonly"
         :disabled="props.amount <= 0"
         expanded
         class="mt-6 mb-4"
