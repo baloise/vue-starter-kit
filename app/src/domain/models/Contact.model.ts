@@ -30,8 +30,8 @@ export class ContactModel extends DomainModel<Contact> implements Contact {
   static defaults(): Contact {
     return {
       gender: 'male',
-      firstName: '',
-      lastName: '',
+      firstName: 'Hans',
+      lastName: 'Muster',
       wantsNewsletter: false,
       email: '',
     }

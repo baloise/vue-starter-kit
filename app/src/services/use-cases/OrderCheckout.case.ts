@@ -5,13 +5,6 @@ import { Order } from '../../domain/entities/Order.entity'
 import { EmptyShoppingCartError } from '../../domain/errors/EmptyShoppingCartError'
 import { OrderModel } from '../../domain/models/Order.model'
 
-/**
- * CHECKOUT ORDER - USE CASE
- * -----------------------------------------
- * Removes a pizza to the shopping cart or if there is already a pizza
- * in decreases the amount.
- */
-
 interface Context {
   items: CartItem[]
 }

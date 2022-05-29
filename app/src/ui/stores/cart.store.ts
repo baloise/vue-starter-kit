@@ -5,16 +5,25 @@ import { defineStore } from 'pinia'
 import { Pizza } from '../../domain/entities/Pizza.entity'
 import { CartResetUseCase } from '../../services/use-cases/CartReset.case'
 import { useStorage } from '@vueuse/core'
+import { CartModel } from '../../domain/models/Cart.model'
 
 export const useCartStore = defineStore('cart', {
   state: () => {
     return {
       items: useStorage<CartItem[]>('cart-items', []),
-      amount: 0,
-      total: 0,
       loading: false,
       failed: false,
     }
+  },
+  getters: {
+    amount: (state) => {
+      const cart = CartModel.create({ items: state.items })
+      return cart.amount()
+    },
+    total: (state) => {
+      const cart = CartModel.create({ items: state.items })
+      return cart.sum()
+    },
   },
   actions: {
     async addPizza(pizza: Pizza) {
@@ -22,10 +31,8 @@ export const useCartStore = defineStore('cart', {
       const result = await useCase.execute({ pizza, items: this.items })
 
       if (result.isSuccess) {
-        const { items, total, amount } = result.value()
+        const { items } = result.value()
         this.items = items
-        this.total = total
-        this.amount = amount
       }
     },
     async removePizza(pizza: Pizza) {
@@ -33,10 +40,8 @@ export const useCartStore = defineStore('cart', {
       const result = await useCase.execute({ pizza, items: this.items })
 
       if (result.isSuccess) {
-        const { items, total, amount } = result.value()
+        const { items } = result.value()
         this.items = items
-        this.total = total
-        this.amount = amount
       }
     },
     async reset() {
@@ -44,10 +49,8 @@ export const useCartStore = defineStore('cart', {
       const result = await useCase.execute()
 
       if (result.isSuccess) {
-        const { items, total, amount } = result.value()
+        const { items } = result.value()
         this.items = items
-        this.total = total
-        this.amount = amount
       }
     },
   },

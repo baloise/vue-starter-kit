@@ -93,7 +93,7 @@ export class Result<TValue, TError = string> {
     return new Result<U, F>(true, null, value ?? null)
   }
 
-  public static fail<U, F = string>(error: F): Result<U, F> {
+  public static fail<U = void, F = string>(error: F): Result<U, F> {
     return new Result<U, F>(false, error, null)
   }
 

@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia'
-import { mockAdapter } from '../../infra/api/mock.adapter'
 import { PizzaGetAllUseCase } from '../../services/use-cases/PizzaGetAll.case'
 import { Pizza } from '../../domain/entities/Pizza.entity'
+import { PizzaApiImpl } from '../../infra/PizzaApiMock'
 
 export const usePizzaStore = defineStore('pizza', {
   state: () => {
@@ -16,7 +16,8 @@ export const usePizzaStore = defineStore('pizza', {
       this.loading = true
       this.failed = false
 
-      const useCase = new PizzaGetAllUseCase(mockAdapter)
+      const api = new PizzaApiImpl()
+      const useCase = new PizzaGetAllUseCase(api)
       const result = await useCase.execute()
 
       this.loading = false

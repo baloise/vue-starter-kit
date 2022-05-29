@@ -38,11 +38,6 @@ export interface HttpResponse<JsonBody> {
   text(): Promise<string>
 }
 
-// const response = await fetch(resource.toString(), {
-//   method: config.method,
-//   body: config.data,
-// })
-
 export abstract class HttpAdapter {
   constructor(public defaults?: HttpRequestConfig) {}
 
@@ -56,14 +51,39 @@ export abstract class HttpAdapter {
   ): Promise<HttpResponse<JsonBody>> {
     return this.request({ ...this.defaults, ...config, url })
   }
-  // get<T = any, R = AxiosResponse<T>, D = any>(url: string, config?: AxiosRequestConfig<D>): Promise<R>;
-  // delete<T = any, R = AxiosResponse<T>, D = any>(url: string, config?: AxiosRequestConfig<D>): Promise<R>;
-  // head<T = any, R = AxiosResponse<T>, D = any>(url: string, config?: AxiosRequestConfig<D>): Promise<R>;
-  // options<T = any, R = AxiosResponse<T>, D = any>(url: string, config?: AxiosRequestConfig<D>): Promise<R>;
-  // post<T = any, R = AxiosResponse<T>, D = any>(url: string, data?: D, config?: AxiosRequestConfig<D>): Promise<R>;
-  // put<T = any, R = AxiosResponse<T>, D = any>(url: string, data?: D, config?: AxiosRequestConfig<D>): Promise<R>;
-  // patch<T = any, R = AxiosResponse<T>, D = any>(url: string, data?: D, config?: AxiosRequestConfig<D>): Promise<R>;
-  // postForm<T = any, R = AxiosResponse<T>, D = any>(url: string, data?: D, config?: AxiosRequestConfig<D>): Promise<R>;
-  // putForm<T = any, R = AxiosResponse<T>, D = any>(url: string, data?: D, config?: AxiosRequestConfig<D>): Promise<R>;
-  // patchForm<T = any, R = AxiosResponse<T>, D = any>(url: string, data?: D, config?: AxiosRequestConfig<D>): Promise<R>;
+
+  public delete<JsonBody = unknown>(
+    url: string,
+    config?: HttpRequestConfig,
+  ): Promise<HttpResponse<JsonBody>> {
+    return this.request({ ...this.defaults, ...config, url, method: 'delete' })
+  }
+
+  public post<JsonBody = unknown>(
+    url: string,
+    body?: BodyInit | null,
+    config?: HttpRequestConfig,
+  ): Promise<HttpResponse<JsonBody>> {
+    return this.request({
+      ...this.defaults,
+      ...config,
+      url,
+      body,
+      method: 'post',
+    })
+  }
+
+  public put<JsonBody = unknown>(
+    url: string,
+    body?: BodyInit | null,
+    config?: HttpRequestConfig,
+  ): Promise<HttpResponse<JsonBody>> {
+    return this.request({
+      ...this.defaults,
+      ...config,
+      url,
+      body,
+      method: 'put',
+    })
+  }
 }

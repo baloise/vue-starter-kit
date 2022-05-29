@@ -14,32 +14,28 @@ import CheckoutFormContact from './CheckoutFormContact.vue'
 import CheckoutFormAddress from './CheckoutFormAddress.vue'
 import { OrderModel } from '../../domain/models/Order.model'
 
-// interface Props {
-//   order: Order
-// }
+interface Props {
+  order: Order
+  loading: boolean
+}
 
-// defineProps<Props>()
+interface Emits {
+  (event: 'submit', value: Order): void
+}
 
-const validationSchema = computed(() => useOrderSchema())
-
-const { handleSubmit, isSubmitting } = useForm<Order>({
-  validationSchema,
-  initialValues: OrderModel.defaults(),
+const props = withDefaults(defineProps<Props>(), {
+  order: () => OrderModel.defaults(),
+  loading: false,
 })
 
-const onSubmit = handleSubmit(
-  (values, { resetForm }) => {
-    console.log('valid', values) // send data to API
-    // reset the form and the field values to their initial values
-    resetForm()
-  },
-  ({ values, errors, results }) => {
-    console.log('invalid') // current form values
-    console.log(values) // current form values
-    console.log(errors) // current form values
-    console.log(results) // current form values
-  },
-)
+const emit = defineEmits<Emits>()
+
+const { handleSubmit, isSubmitting } = useForm<Order>({
+  validationSchema: computed(() => useOrderSchema()),
+  initialValues: props.order,
+})
+
+const onSubmit = handleSubmit((values) => emit('submit', values))
 </script>
 
 <template>
@@ -47,10 +43,21 @@ const onSubmit = handleSubmit(
     <BalCardTitle>Checkout</BalCardTitle>
     <BalCardContent>
       <form @submit="onSubmit">
-        <CheckoutFormContact class="mb-6"></CheckoutFormContact>
-        <CheckoutFormAddress class="mb-6"></CheckoutFormAddress>
+        <CheckoutFormContact
+          :disabled="isSubmitting || loading"
+          class="mb-6"
+        ></CheckoutFormContact>
+        <CheckoutFormAddress
+          :disabled="isSubmitting || loading"
+          class="mb-6"
+        ></CheckoutFormAddress>
         <BalButtonGroup>
-          <BalButton type="submit" :disabled="isSubmitting">Submit</BalButton>
+          <BalButton
+            type="submit"
+            :disabled="isSubmitting"
+            :loading="isSubmitting || loading"
+            >Submit</BalButton
+          >
         </BalButtonGroup>
       </form>
     </BalCardContent>

@@ -26,10 +26,10 @@ export class AddressModel extends DomainModel<Address> implements Address {
 
   static defaults(): Address {
     return {
-      postalCode: '',
-      city: '',
-      street: '',
-      streetNumber: '',
+      postalCode: '1234',
+      city: 'Gotham',
+      street: '2nd Avenue',
+      streetNumber: '42a',
     }
   }
 }
