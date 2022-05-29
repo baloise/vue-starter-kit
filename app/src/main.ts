@@ -9,17 +9,6 @@
 import { createApp } from 'vue'
 
 /* ============
- * Styling
- * ============
- *
- * The global styles are defined in the src/styles/main.scss file.
- *
- * https://sass-lang.com/
- */
-
-// import './app/styles/main.scss'
-
-/* ============
  * Configure App
  * ============
  *
@@ -32,11 +21,11 @@ import { createApp } from 'vue'
  * https://v3.vuejs.org/guide/plugins.html
  */
 
-import { baloiseDesignSystem } from './infra/ui/plugins/baloise-design-system.plugin'
-import { router } from './infra/ui/plugins/router.plugin'
-import { i18n } from './infra/ui/plugins/i18n.plugin'
-import { pinia } from './infra/ui/plugins/store.plugin'
-import App from './infra/ui/App.vue'
+import { baloiseDesignSystem } from './ui/plugins/baloise-design-system.plugin'
+import { router } from './ui/plugins/router.plugin'
+import { i18n } from './ui/plugins/i18n.plugin'
+import { pinia } from './ui/plugins/store.plugin'
+import App from './ui/App.vue'
 
 const app = createApp(App)
   /**

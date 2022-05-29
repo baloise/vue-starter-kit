@@ -1,7 +1,7 @@
 {
   "version": "0.2",
   "language": "en",
-  "ignorePaths": ["node_modules/**", "app/src/infra/ui/locales/**"],
+  "ignorePaths": ["node_modules/**", "app/src/ui/locales/**"],
   "words": [
     "baloise",
     "Baloise",
@@ -10,6 +10,7 @@
     "pinia",
     "vue",
     "Vue",
+    "vueuse",
     "vite",
     "Vite",
     "Squirtle",

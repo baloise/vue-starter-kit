@@ -1,13 +1,9 @@
-import { Contact } from './../../domain/Contact'
 import { object, string, mixed, SchemaOf, boolean } from 'yup'
+import { Contact } from '../../domain/entities/Contact.entity'
 
-export function useContactSchema(disabled = false): SchemaOf<Contact> {
+export function useContactSchema(): SchemaOf<Contact> {
   return object({
-    firstName: string().when([], {
-      is: () => disabled,
-      then: (schema) => schema.optional(),
-      otherwise: (schema) => schema.defined().required(),
-    }),
+    firstName: string().defined().required(),
     lastName: string().defined().required(),
     gender: mixed().oneOf(['male', 'female']).defined().required(),
     wantsNewsletter: boolean().required(),

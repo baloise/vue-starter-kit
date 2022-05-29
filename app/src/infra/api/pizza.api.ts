@@ -1,4 +1,4 @@
-import { HttpRequestConfig } from './http/http'
+import { HttpRequestConfig } from '../../lib/http/http'
 
 class PizzaApi {
   public defaults: HttpRequestConfig = {}

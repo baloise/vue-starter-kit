@@ -294,7 +294,14 @@
   "resolved" "https://registry.npmjs.org/@types/istanbul-lib-coverage/-/istanbul-lib-coverage-2.0.4.tgz"
   "version" "2.0.4"
 
-"@types/lodash@^4.14.175":
+"@types/lodash.clone@^4.5.7":
+  "integrity" "sha512-jugWYM+xBUQCpWbn7p6BSbf8bRMHtJYnEIGZYngbStaU0aN4VFgAAkGgsc+MtHuepBOmjyUGiGv+dHnQQIGLZA=="
+  "resolved" "https://registry.npmjs.org/@types/lodash.clone/-/lodash.clone-4.5.7.tgz"
+  "version" "4.5.7"
+  dependencies:
+    "@types/lodash" "*"
+
+"@types/lodash@*", "@types/lodash@^4.14.175":
   "integrity" "sha512-/THyiqyQAP9AfARo4pF+aCGcyiQ94tX/Is2I7HofNRqoYLgN1PBoOWu2/zTA5zMxzP5EFutMtWtGAFRKUe961Q=="
   "resolved" "https://registry.npmjs.org/@types/lodash/-/lodash-4.14.182.tgz"
   "version" "4.14.182"
@@ -459,6 +466,27 @@
   "integrity" "sha512-wIJR4e/jISBKVKfiod3DV32BlDsoD744WVCuCaGtaSKvhvTL9gI5vl2AYSy00V51YaM8dCOFi3zcpCON8G1WqA=="
   "resolved" "https://registry.npmjs.org/@vue/test-utils/-/test-utils-2.0.0-rc.21.tgz"
   "version" "2.0.0-rc.21"
+
+"@vueuse/core@*", "@vueuse/core@^8.5.0":
+  "integrity" "sha512-VEJ6sGNsPlUp0o9BGda2YISvDZbhWJSOJu5zlp2TufRGVrLcYUKr31jyFEOj6RXzG3k/H4aCYeZyjpItfU8glw=="
+  "resolved" "https://registry.npmjs.org/@vueuse/core/-/core-8.5.0.tgz"
+  "version" "8.5.0"
+  dependencies:
+    "@vueuse/metadata" "8.5.0"
+    "@vueuse/shared" "8.5.0"
+    "vue-demi" "*"
+
+"@vueuse/metadata@8.5.0":
+  "integrity" "sha512-WxsD+Cd+bn+HcjpY6Dl9FJ8ywTRTT9pTwk3bCQpzEhXVYAyNczKDSahk50fCfIJKeWHhyI4B2+/ZEOxQAkUr0g=="
+  "resolved" "https://registry.npmjs.org/@vueuse/metadata/-/metadata-8.5.0.tgz"
+  "version" "8.5.0"
+
+"@vueuse/shared@8.5.0":
+  "integrity" "sha512-qKG+SZb44VvGD4dU5cQ63z4JE2Yk39hQUecR0a9sEdJA01cx+XrxAvFKJfPooxwoiqalAVw/ktWK6xbyc/jS3g=="
+  "resolved" "https://registry.npmjs.org/@vueuse/shared/-/shared-8.5.0.tgz"
+  "version" "8.5.0"
+  dependencies:
+    "vue-demi" "*"
 
 "acorn-walk@^8.1.1":
   "integrity" "sha512-k+iyHEuPgSw6SbuDpGQM+06HQUa04DZ3o+F6CSzXMvvI5KMvnaEqXe+YVe555R9nn6GPt404fos4wcgpw12SDA=="
@@ -1080,6 +1108,11 @@
   "integrity" "sha1-+CbJtOKoUR2E46yinbBeGk87cqk="
   "resolved" "https://registry.npmjs.org/lodash.capitalize/-/lodash.capitalize-4.2.1.tgz"
   "version" "4.2.1"
+
+"lodash.clone@^4.5.0":
+  "integrity" "sha1-GVhwRQ9aExkkeN9Lw9I9LeoZB7Y="
+  "resolved" "https://registry.npmjs.org/lodash.clone/-/lodash.clone-4.5.0.tgz"
+  "version" "4.5.0"
 
 "lodash.isarray@^4.0.0":
   "integrity" "sha1-KspJayjEym1yZxUxNZDALm6jRAM="
@@ -1768,7 +1801,7 @@
   dependencies:
     "@volar/vue-typescript" "0.34.11"
 
-"vue@^2.6.14 || ^3.2.0", "vue@^3.0.0", "vue@^3.0.0-0 || ^2.6.0", "vue@^3.0.1", "vue@^3.2.0", "vue@^3.2.25", "vue@^3.2.33", "vue@>=3.0.5", "vue@>=3.1.0", "vue@3.2.33":
+"vue@^2.6.0 || ^3.2.0", "vue@^2.6.14 || ^3.2.0", "vue@^3.0.0", "vue@^3.0.0-0 || ^2.6.0", "vue@^3.0.1", "vue@^3.2.0", "vue@^3.2.25", "vue@^3.2.33", "vue@>=3.0.5", "vue@>=3.1.0", "vue@3.2.33":
   "integrity" "sha512-si1ExAlDUrLSIg/V7D/GgA4twJwfsfgG+t9w10z38HhL/HA07132pUQ2KuwAo8qbCyMJ9e6OqrmWrOCr+jW7ZQ=="
   "resolved" "https://registry.npmjs.org/vue/-/vue-3.2.33.tgz"
   "version" "3.2.33"
