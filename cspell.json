@@ -1,10 +1,7 @@
 {
   "version": "0.2",
   "language": "en",
-  "ignorePaths": [
-    "node_modules/**",
-    "src/ui/locales/**"
-  ],
+  "ignorePaths": ["node_modules/**", "src/ui/locales/**"],
   "words": [
     "Aeschengraben",
     "baloise",

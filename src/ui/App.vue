@@ -39,7 +39,7 @@ onMounted(() => i18nStore.init())
         </BalNavbarMenu>
       </BalNavbar>
     </header>
-    <main className="container is-compact">
+    <main className="container">
       <router-view />
     </main>
     <BalFooter :hideLinks="hideLinks"></BalFooter>

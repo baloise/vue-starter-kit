@@ -10,6 +10,8 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "esModuleInterop": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": false,
     "lib": ["esnext", "dom"],
     "skipLibCheck": true,
     "types": ["vite/client", "vitest/globals"],
@@ -26,6 +28,12 @@
     ".storybook/**/*.js",
     ".storybook/**/*.ts"
   ],
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/domain/__test__/Cart.test.ts"],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "src/domain/__test__/Cart.test.ts"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
