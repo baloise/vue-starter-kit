@@ -8,5 +8,8 @@ export const testConfig: UserConfig = {
     deps: {
       inline: ['@baloise/design-system-components'],
     },
+    coverage: {
+      reporter: ['text', 'json', 'html'],
+    },
   },
 } as UserConfig

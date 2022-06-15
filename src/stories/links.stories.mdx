@@ -1,0 +1,39 @@
+import { Meta } from '@storybook/addon-docs'
+import Code from './assets/code-brackets.svg'
+
+<Meta
+  title="Links"
+  parameters={{
+    previewTabs: {
+      canvas: { hidden: true },
+      '@geometricpanda/storybook-addon-iframe': { hidden: true },
+    },
+    viewMode: 'docs',
+  }}
+/>
+
+# Links & Resources
+
+Here we gathered a collection of useful links of the resources
+we are using in this training.
+
+import Vue from './assets/img/tools/vue.svg'
+import TypeScript from './assets/img/tools/typescript.svg'
+
+<div className="link-list">
+  <a className="link-item" href="https://www.typescriptlang.org/play" target="_blank">
+    <img src={TypeScript} alt="plugin" />
+    <span>
+      <strong>TypeScript Playground</strong>
+      Live editor to run TypeScript code directly in the Browser.
+    </span>
+  </a>
+  <a className="link-item" href="https://sfc.vuejs.org/" target="_blank">
+    <img src={Vue} alt="plugin" />
+    <span>
+      <strong>Vue.js Playground</strong>
+      Live editor to run Vue directly in the Browser.
+    </span>
+  </a>
+
+</div>

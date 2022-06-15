@@ -1,0 +1,182 @@
+import { Meta } from '@storybook/addon-docs'
+import Code from './assets/code-brackets.svg'
+
+<Meta
+  title="Tools"
+  parameters={{
+    previewTabs: {
+      canvas: { hidden: true },
+      '@geometricpanda/storybook-addon-iframe': { hidden: true },
+    },
+    viewMode: 'docs',
+  }}
+/>
+
+# Tools
+
+Here we gathered a collection of useful links to the tools / libraries / frameworks
+we are using in this training.
+
+import Vue from './assets/img/tools/vue.svg'
+import Baloise from './assets/img/tools/baloise.svg'
+import Pinia from './assets/img/tools/pinia.svg'
+import VeeValidate from './assets/img/tools/vee-validate.png'
+import VueI18n from './assets/img/tools/vue-i18n.png'
+import VueUse from './assets/img/tools/vue-use.png'
+import Immer from './assets/img/tools/immer.svg'
+import TypeScript from './assets/img/tools/typescript.svg'
+
+<div className="subheading">Application Tools</div>
+
+Application tools are used for the application logic itself and are added
+to the bundle of the deployable application.
+
+<div className="link-list">
+  <a
+    className="link-item"
+    href="https://www.typescriptlang.org/"
+    target="_blank"
+  >
+    <img src={TypeScript} alt="plugin" />
+    <span>
+      <strong>TypeScript</strong>
+      TypeScript is a strongly typed programming language that builds on JavaScript,
+      giving you better tooling at any scale.
+    </span>
+  </a>
+  <a className="link-item" href="https://vuejs.org/" target="_blank">
+    <img src={Vue} alt="plugin" />
+    <span>
+      <strong>Vue.js</strong>
+      Vue (pronounced /vjuː/, like view) is a JavaScript framework for building user
+      interfaces.
+    </span>
+  </a>
+  <a className="link-item" href="https://design.baloise.dev/" target="_blank">
+    <img src={Baloise} alt="plugin" />
+    <span>
+      <strong>Baloise Design System</strong>A collection of UI components and a
+      clearly defined visual style.
+    </span>
+  </a>
+  <a className="link-item" href="https://pinia.vuejs.org/" target="_blank">
+    <img src={Pinia} alt="plugin" />
+    <span>
+      <strong>Stage Mgmt - Pinia</strong>
+      Global state Mgmt solution for the Vue.js framework
+    </span>
+  </a>
+  <a
+    className="link-item"
+    href="https://vee-validate.logaretm.com/v4/"
+    target="_blank"
+  >
+    <img src={VeeValidate} alt="plugin" />
+    <span>
+      <strong>Form - VeeValidate</strong>
+      Form Validation for Vue.js
+    </span>
+  </a>
+  <a
+    className="link-item"
+    href="https://github.com/jquense/yup"
+    target="_blank"
+  >
+    <img src={Code} alt="plugin" />
+    <span>
+      <strong>Form - Yup</strong>
+      Yup is a schema builder for runtime value parsing and validation
+    </span>
+  </a>
+  <a className="link-item" href="https://router.vuejs.org/" target="_blank">
+    <img src={Vue} alt="plugin" />
+    <span>
+      <strong>Vue Router</strong>
+      In charge for the whole routing in the single-page-application.
+    </span>
+  </a>
+  <a className="link-item" href="https://vue-i18n.intlify.dev/" target="_blank">
+    <img src={VueI18n} alt="plugin" />
+    <span>
+      <strong>Vue i18n</strong>
+      Vue I18n is internationalization plugin for Vue.js
+    </span>
+  </a>
+  <a className="link-item" href="https://vueuse.org/" target="_blank">
+    <img src={VueUse} alt="plugin" />
+    <span>
+      <strong>VueUse</strong>
+      Collection of essential Vue Composition Utilities
+    </span>
+  </a>
+  <a
+    className="link-item"
+    href="https://immerjs.github.io/immer/"
+    target="_blank"
+  >
+    <img src={Immer} alt="plugin" />
+    <span>
+      <strong>Immer</strong>(German for: always) is a tiny package that allows
+      you to work with immutable state in a more convenient way.
+    </span>
+  </a>
+  <a
+    className="link-item"
+    href="https://github.com/baloise/web-app-utils"
+    target="_blank"
+  >
+    <img src={Baloise} alt="plugin" />
+    <span>
+      <strong>Baloise Web App Utils</strong>A collection of utility functions
+    </span>
+  </a>
+</div>
+
+import Vite from './assets/img/tools/vite.svg'
+import Vitest from './assets/img/tools/vitest.svg'
+import Cypress from './assets/img/tools/cypress.svg'
+import Storybook from './assets/img/tools/storybook.svg'
+
+<div className="subheading">Build Tools</div>
+
+Build tools as the name already states is used to build our app
+to be deployed on a web server.
+
+<div className="link-list">
+  <a
+    className="link-item"
+    href="https://storybook.js.org/docs/vue/get-started/introduction"
+    target="_blank"
+  >
+    <img src={Storybook} alt="plugin" />
+    <span>
+      <strong>Storybook</strong>
+      UI development, testing, and documentation
+    </span>
+  </a>
+  <a
+    className="link-item"
+    href="https://storybook.js.org/docs/react/addons/addon-types"
+    target="_blank"
+  >
+    <img src={Vite} alt="plugin" />
+    <span>
+      <strong>Vite</strong>
+      Frontend tooling, bundling, dev server
+    </span>
+  </a>
+  <a className="link-item" href="https://vitest.dev/" target="_blank">
+    <img src={Vitest} alt="plugin" />
+    <span>
+      <strong>Vitest</strong>
+      Unit-Test framework powered by Vite
+    </span>
+  </a>
+  <a className="link-item" href="https://docs.cypress.io/" target="_blank">
+    <img src={Cypress} alt="plugin" />
+    <span>
+      <strong>Cypress</strong>
+      E2E-Test framework
+    </span>
+  </a>
+</div>

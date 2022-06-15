@@ -1,16 +1,13 @@
 {
-  "app/src/**/*.{ts,tsx,json,css,scss,sass,md,vue}": [
+  "src/**/*.{ts,tsx,json,css,scss,sass,md,mdx,vue}": [
     "prettier --write",
-    "eslint --fix",
     "cspell --gitignore"
   ],
-  "app/src/**/*.{css,scss,sass,vue}": [
+  "src/**/*.{ts,tsx,json,vue}": [
+    "eslint --fix"
+  ],
+  "src/**/*.{css,scss,sass,vue}": [
     "stylelint"
-  ],
-  "docs/stories/**/*.{ts,json,md,mdx,vue}": [
-    "prettier --write",
-    "eslint --fix",
-    "cspell --gitignore"
   ],
   "cypress/**/*.{ts,json,md}": [
     "prettier --write",

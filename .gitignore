@@ -24,10 +24,7 @@ dist-ssr
 *.sw?
 
 # Custom
-/tests/e2e/videos/
-/tests/e2e/screenshots/
-/public/assets
-/coverage
-/app/coverage
-app/public/assets/fonts
-app/auto-imports.d.ts
+coverage
+public/assets
+auto-imports.d.ts
+storybook-static
