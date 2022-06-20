@@ -8,7 +8,7 @@ import {
 } from '@baloise/design-system-components'
 import { useStorage } from '@vueuse/core'
 import { i18n } from '../plugins/i18n.plugin'
-import { updateLocale } from '@baloise/web-app-form-vue'
+// import { updateLocale } from '@baloise/web-app-form-vue'
 
 export const useI18nStore = defineStore('i18n', {
   state: () => {
@@ -39,7 +39,7 @@ export const useI18nStore = defineStore('i18n', {
       this.locale = locale
       updateBalLanguage(this.locale)
       i18n.global.locale.value = this.locale
-      updateLocale(i18n as any)
+      // updateLocale(i18n as any)
     },
   },
 })

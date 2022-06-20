@@ -50,7 +50,9 @@ const onSubmit = handleSubmit((pokemon) => {
               <BalFieldControl>
                 <BalInput v-model="value"></BalInput>
               </BalFieldControl>
-              <BalFieldMessage>{{ message }}</BalFieldMessage>
+              <BalFieldMessage v-if="message">{{
+                $t(message)
+              }}</BalFieldMessage>
             </BalField>
           </div>
           <div className="column">
